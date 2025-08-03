@@ -11,9 +11,10 @@
   <a href="https://github.com/74Thirsty?tab=repositories"><img src="https://img.shields.io/github/followers/74Thirsty?style=flat-square&logo=github"></a>
 </p>
 
+<div style="text-align: center;">
+  <img src="https://i.postimg.cc/SQVRgDcg/IMG-1006.png" width="500" />
+</div>
 
-
-[![TV.png](https://i.postimg.cc/qMWmH8Py/TV.png)](https://postimg.cc/mtN3QF2g)
 > <p><strong>Christopher Hirschauer</strong><br>
 > Builder @ the bleeding edge of MEV, automation, and high-speed arbitrage.<br>
 <em>August 2, 2025</em></p>
