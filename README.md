@@ -9,8 +9,9 @@
   <a href="https://github.com/74Thirsty?tab=repositories"><img src="https://img.shields.io/github/followers/74Thirsty?style=flat-square&logo=github"></a>
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/74Thirsty/74Thirsty/main/assets/gadget_saavy_neon_flicker.svg" alt="Gadget Saavy Neon Flicker" />
+  <img src="https://raw.githubusercontent.com/74Thirsty/74Thirsty/main/assets/banner.svg" alt="Gadget Saavy Neon Flicker" />
 </p>
+
 
 [![TV.png](https://i.postimg.cc/qMWmH8Py/TV.png)](https://postimg.cc/mtN3QF2g)
 > <p><strong>Christopher Hirschauer</strong><br>
