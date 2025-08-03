@@ -3,7 +3,7 @@
     <style type="text/css">
 
       .bg {
-        fill: #000;
+        fill: none;
       }
 
       .letter {
