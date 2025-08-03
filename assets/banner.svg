@@ -1,7 +1,6 @@
 <svg width="1000" height="200" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style type="text/css">
-      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 
       .bg {
         fill: #000;
