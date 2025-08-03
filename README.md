@@ -9,12 +9,23 @@
   <a href="https://github.com/74Thirsty?tab=repositories"><img src="https://img.shields.io/github/followers/74Thirsty?style=flat-square&logo=github"></a>
 </p>
 
+[![TV.png](https://i.postimg.cc/qMWmH8Py/TV.png)](https://postimg.cc/mtN3QF2g)
+> <p><strong>Christopher Hirschauer</strong><br>
+> Builder @ the bleeding edge of MEV, automation, and high-speed arbitrage.<br>
+<em>August 2, 2025</em></p>
+<div class="badge-row">
+<a href="https://www.jetbrains.com/pycharm/"><img src="https://img.shields.io/badge/Built%20with-PyCharm-782F40?logo=pycharm&logoColor=CEB888"></a>
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.11-003057?logo=python&labelColor=B3A369"></a>
+<a href="https://docs.soliditylang.org/"><img src="https://img.shields.io/badge/Solidity-0.8.20-7BAFD4?logo=ethereum&labelColor=4B9CD3"></a>
+<a href="https://www.flashbots.net"><img src="https://img.shields.io/badge/Flashbots-MEV%20Bundle-2774AE?logo=thunderbird&labelColor=FFD100"></a>
+<a href="https://christopherhirschauer.bio"><img src="https://img.shields.io/badge/C.Hirschauer-Lead%20Developer-041E42?logo=parrotsecurity&labelColor=8D817B"></a>
+
 ---
 
 ### 🧬 About Me
 
 ```yaml
-handle: 74Thirsty
+handle: gadget saavy
 role: Blockchain Developer & Arbitrage Strategist
 stack:
   - Python (asyncio | fastapi | networkx)
@@ -88,7 +99,7 @@ focus:
   <i>“The liquidity isn’t gone. It just moved faster than you.”</i><br>
   — 74Thirsty, probably
 </p>
-```
+
 
 ---
 
