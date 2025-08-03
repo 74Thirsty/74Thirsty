@@ -104,13 +104,3 @@ focus:
   — 74Thirsty, probably
 </p>
 
-
----
-
-### ⚠️ Optional Upgrades:
-
-* Add a banner or animated SVG header (I can generate one)
-* Connect GitHub Actions to auto-update stats or recent commits
-* Link directly to live dashboards, GraphML exports, or trade logs
-
-Let me know if you want that **banner**, **workflow automation**, or want me to format one of your repos like a product page next.
