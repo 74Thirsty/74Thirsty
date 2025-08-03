@@ -1,4 +1,6 @@
-<h1 align="center">👑 74Thirsty 👑</h1>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/74Thirsty/74Thirsty/main/assets/banner.svg" alt="Gadget Saavy Neon Flicker" />
+</p>
 <p align="center">
   🧠 DeFi Engineer • ⚡ Arbitrage Architect • 💻 Solidity Warlock
 </p>
@@ -8,9 +10,7 @@
   <a href="mailto:gadget.saavy@gmx.us"><img src="https://img.shields.io/badge/email-inquiry-blue?style=flat-square&logo=gmail"></a>
   <a href="https://github.com/74Thirsty?tab=repositories"><img src="https://img.shields.io/github/followers/74Thirsty?style=flat-square&logo=github"></a>
 </p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/74Thirsty/74Thirsty/main/assets/banner.svg" alt="Gadget Saavy Neon Flicker" />
-</p>
+
 
 
 [![TV.png](https://i.postimg.cc/qMWmH8Py/TV.png)](https://postimg.cc/mtN3QF2g)
