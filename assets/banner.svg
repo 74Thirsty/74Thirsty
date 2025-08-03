@@ -4,10 +4,30 @@
       fill: #0d1117;
     }
 
+      .glow {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 64px;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      fill: #00ffff;
+      animation: colorPulse 6s infinite alternate;
+      filter: drop-shadow(0 0 6px currentColor)
+      drop-shadow(0 0 12px currentColor)
+      drop-shadow(0 0 20px currentColor);
+      }
+      
+      @keyframes colorPulse {
+      0%   { fill: #00ffff; color: #00ffff; } /* cyan */
+      25%  { fill: #00ff88; color: #00ff88; } /* green */
+      50%  { fill: #88ff00; color: #88ff00; } /* lime */
+      75%  { fill: #ff00ff; color: #ff00ff; } /* magenta */
+      100% { fill: #00ffff; color: #00ffff; } /* back to cyan */
+      }
+    
     .letter {
       font-family: Orbitron, sans-serif;
       font-size: 64px;
-      fill: #00ff88;
+      fill: #0d1117;
       text-anchor: middle;
       dominant-baseline: middle;
       animation: flicker 200ms steps(1, end) infinite;
