@@ -8,6 +8,9 @@
   <a href="mailto:gadget.saavy@gmx.us"><img src="https://img.shields.io/badge/email-inquiry-blue?style=flat-square&logo=gmail"></a>
   <a href="https://github.com/74Thirsty?tab=repositories"><img src="https://img.shields.io/github/followers/74Thirsty?style=flat-square&logo=github"></a>
 </p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/74Thirsty/74Thirsty/main/assets/gadget_saavy_neon_flicker.svg" alt="Gadget Saavy Neon Flicker" />
+</p>
 
 [![TV.png](https://i.postimg.cc/qMWmH8Py/TV.png)](https://postimg.cc/mtN3QF2g)
 > <p><strong>Christopher Hirschauer</strong><br>
@@ -89,8 +92,8 @@ focus:
 
 ### 🔗 Let's Connect
 
-* 💬 Twitter: [@74Thirsty](https://twitter.com/74Thirsty)
-* 🌐 LinkedIn: [linkedin.com/in/74Thirsty](https://linkedin.com/in/74Thirsty)
+* 💬 Bio: [@74Thirsty](https://christopherhirschauer.bio)
+* 🌐 LinkedIn: [linkedin.com/in/profitize](https://linkedin.com/in/profitize)
 * 📧 Email: [c.hirschauer@outlook.com](mailto:c.hirschauer@outlook.com)
 
 ---
