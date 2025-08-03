@@ -10,49 +10,36 @@
       fill: #00ff88;
       text-anchor: middle;
       dominant-baseline: middle;
-      filter: drop-shadow(0 0 3px #00ff88)
-              drop-shadow(0 0 6px #00ff88)
-              drop-shadow(0 0 12px #00ff88)
-              drop-shadow(0 0 24px #00ff88);
+      animation: flicker 200ms steps(1, end) infinite;
+      filter:
+        drop-shadow(0 0 3px #00ff88)
+        drop-shadow(0 0 6px #00ff88)
+        drop-shadow(0 0 12px #00ff88)
+        drop-shadow(0 0 24px #00ff88)
+        drop-shadow(0 0 48px #00ff88);
     }
 
-    .l1  { animation: flicker1 3s infinite; }
-    .l2  { animation: flicker2 3.2s infinite; }
-    .l3  { animation: flicker3 2.8s infinite; }
-    .l4  { animation: flicker4 3.4s infinite; }
-    .l5  { animation: flicker5 3.1s infinite; }
-    .l6  { animation: flicker6 3.6s infinite; }
-    .l7  { animation: flicker7 3s infinite; }
-    .l8  { animation: flicker8 2.9s infinite; }
-    .l9  { animation: flicker9 3.5s infinite; }
-    .l10 { animation: flicker10 3.3s infinite; }
-    .l11 { animation: flicker11 2.7s infinite; }
-
-    @keyframes flicker1  { 0%,100%{opacity:1;} 50%{opacity:0.3;} 80%{opacity:0.7;} }
-    @keyframes flicker2  { 0%,100%{opacity:1;} 30%{opacity:0.2;} 60%{opacity:0.9;} }
-    @keyframes flicker3  { 0%,100%{opacity:1;} 40%{opacity:0.1;} 70%{opacity:0.6;} }
-    @keyframes flicker4  { 0%,100%{opacity:1;} 45%{opacity:0.5;} 75%{opacity:0.8;} }
-    @keyframes flicker5  { 0%,100%{opacity:1;} 20%{opacity:0.2;} 50%{opacity:0.9;} }
-    @keyframes flicker6  { 0%,100%{opacity:1;} 35%{opacity:0.4;} 65%{opacity:0.6;} }
-    @keyframes flicker7  { 0%,100%{opacity:1;} 25%{opacity:0.3;} 55%{opacity:0.85;} }
-    @keyframes flicker8  { 0%,100%{opacity:1;} 30%{opacity:0.1;} 70%{opacity:0.75;} }
-    @keyframes flicker9  { 0%,100%{opacity:1;} 15%{opacity:0.3;} 60%{opacity:0.6;} }
-    @keyframes flicker10 { 0%,100%{opacity:1;} 10%{opacity:0.25;} 50%{opacity:0.85;} }
-    @keyframes flicker11 { 0%,100%{opacity:1;} 18%{opacity:0.2;} 48%{opacity:0.7;} }
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 22%, 24%, 55% {
+        opacity: 0;
+      }
+    }
   </style>
 
   <rect width="100%" height="100%" class="bg" />
 
-  <!-- Each character with its own flicker -->
-  <text x="180" y="100" class="letter l1">G</text>
-  <text x="250" y="100" class="letter l2">A</text>
-  <text x="320" y="100" class="letter l3">D</text>
-  <text x="390" y="100" class="letter l4">G</text>
-  <text x="460" y="100" class="letter l5">E</text>
-  <text x="530" y="100" class="letter l6">T</text>
-  <text x="620" y="100" class="letter l7">S</text>
-  <text x="690" y="100" class="letter l8">A</text>
-  <text x="760" y="100" class="letter l9">A</text>
-  <text x="830" y="100" class="letter l10">V</text>
-  <text x="900" y="100" class="letter l11">Y</text>
+  <text x="180" y="100" class="letter">G</text>
+  <text x="250" y="100" class="letter">A</text>
+  <text x="320" y="100" class="letter">D</text>
+  <text x="390" y="100" class="letter">G</text>
+  <text x="460" y="100" class="letter">E</text>
+  <text x="530" y="100" class="letter">T</text>
+  <text x="620" y="100" class="letter">S</text>
+  <text x="690" y="100" class="letter">A</text>
+  <text x="760" y="100" class="letter">A</text>
+  <text x="830" y="100" class="letter">V</text>
+  <text x="900" y="100" class="letter">Y</text>
 </svg>
