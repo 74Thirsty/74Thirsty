@@ -1,10 +1,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/74Thirsty/74Thirsty/main/assets/banner.svg"
        alt="Gadget Saavy Neon Flicker"
-       style="width: 100%; height: auto;" />
-</p>
-<p align="center">
-  🧠 DeFi Engineer • ⚡ Arbitrage Architect • 💻 Solidity Warlock
+       style="width: 100%; height: auto; max-width: 1000px;" />
 </p>
 
 <p align="center">
@@ -93,6 +90,15 @@ focus:
 | UI             | Coming soon: React GUI for path viz       |
 
 ---
+## Smart Contract Wizard Demo
+
+[![Smart Contract Wizard Demo](https://img.youtube.com/vi/It12qU-rnMI/maxresdefault.jpg)](https://youtu.be/It12qU-rnMI?si=a26GfmkSikzqr7SO)
+
+## *How to Launch Your Own ERC-20 Token in 5 Minutes — Smart Contract Wizard Demo (No Coding Required)*
+
+>Discover how to quickly create, customize, and deploy your own ERC-20 token using our Smart Contract Wizard — no prior coding experience needed!  
+
+This step-by-step demo walks you through building secure Solidity contracts, generating production-ready code, and launching your token on Ethereum or compatible blockchains in minutes.  Perfect for beginners and seasoned developers alike looking for an easy, fast way to create DeFi tokens, NFTs, and smart contracts without manual coding.  Start building your blockchain project today with the ultimate no-code Solidity contract generator!
 
 ### 🔗 Let's Connect
 
@@ -104,6 +110,6 @@ focus:
 
 <p align="center">
   <i>“The liquidity isn’t gone. It just moved faster than you.”</i><br>
-  — 74Thirsty, probably
+  — gadget saavy, probably
 </p>
 
