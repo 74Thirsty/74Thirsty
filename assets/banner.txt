@@ -1,0 +1,48 @@
+<svg width="1000" height="200" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css">
+      .bg {
+        fill: #0d1117;
+      }
+
+      .glow-rect {
+        fill: none;
+        stroke: #ff00cc;
+        stroke-width: 4;
+        rx: 20;
+        ry: 20;
+        filter: drop-shadow(0 0 8px #ff00cc)
+                drop-shadow(0 0 16px #ff00cc)
+                drop-shadow(0 0 32px #ff00cc);
+        animation: flickerBorder 2.5s infinite alternate;
+      }
+
+      @keyframes flickerBorder {
+        0%, 17%, 19%, 22%, 100% {
+          opacity: 1;
+          stroke: #ff00cc;
+        }
+        18%, 20%, 21% {
+          opacity: 0.2;
+          stroke: #ff33cc;
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="1000" height="200" />
+
+  <!-- 🔥 Flickering neon border -->
+  <rect class="glow-rect" x="5" y="5" width="990" height="190" />
+
+  <!-- ✨ Your original banner text and elements go BELOW this line -->
+  <!-- Example: -->
+  <text x="500" y="100" text-anchor="middle"
+        font-family="Orbitron, sans-serif"
+        font-size="64px"
+        fill="#ff00cc"
+        style="filter: drop-shadow(0 0 5px #ff00cc) drop-shadow(0 0 10px #ff00cc);">
+    GADGET SAAVY
+  </text>
+</svg>
