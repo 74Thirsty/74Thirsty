@@ -1,8 +1,7 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/74Thirsty/74Thirsty/main/assets/banner.svg"
-       alt="Gadget Saavy Neon Flicker"
-       style="width: 100%; height: auto; max-width: 1000px;" />
+  <img src="https://raw.githubusercontent.com/74Thirsty/74Thirsty/main/assets/banner.svg" width="1000" />
 </p>
+
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=74Thirsty&style=flat-square" alt="profile views" />
