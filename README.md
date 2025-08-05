@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/74Thirsty/74Thirsty/main/assets/banner.svg" alt="Gadget Saavy Neon Flicker" />
+  <img src="https://raw.githubusercontent.com/74Thirsty/74Thirsty/main/assets/banner.svg"
+       alt="Gadget Saavy Neon Flicker"
+       style="width: 100%; height: auto;" />
 </p>
 <p align="center">
   🧠 DeFi Engineer • ⚡ Arbitrage Architect • 💻 Solidity Warlock
