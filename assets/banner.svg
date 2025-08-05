@@ -2,7 +2,6 @@
 <svg viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gadget Saavy Neon Flicker Banner" preserveAspectRatio="xMidYMid meet">
   <defs>
     <style type="text/css">
-      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 
       .bg {
         fill: #F6F8FA;
