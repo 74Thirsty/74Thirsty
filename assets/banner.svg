@@ -20,11 +20,11 @@
       @keyframes flickerBorder {
         0%, 17%, 19%, 22%, 100% {
           opacity: 1;
-          stroke: #ff00cc;
+          stroke: #4b9cd3;
         }
         18%, 20%, 21% {
           opacity: 0.2;
-          stroke: #ff33cc;
+          stroke: #13294b;
         }
       }
     </style>
@@ -41,8 +41,8 @@
   <text x="500" y="100" text-anchor="middle"
         font-family="Orbitron, sans-serif"
         font-size="64px"
-        fill="#4b9cd3"
-        style="filter: drop-shadow(0 0 5px #ff00cc) drop-shadow(0 0 10px #ff00cc);">
+        fill="#151515"
+        style="filter: drop-shadow(0 0 5px #13294b) drop-shadow(0 0 10px #13294b);">
     GADGET SAAVY
   </text>
 </svg>
