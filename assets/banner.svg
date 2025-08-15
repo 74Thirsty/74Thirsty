@@ -41,8 +41,8 @@
   <text x="500" y="115" text-anchor="middle"
         font-family="Orbitron, Roboto"
         font-size="64px"
-        fill="#151515"
-        style="filter: drop-shadow(0 0 5px #13294b) drop-shadow(0 0 10px #13294b);">
+        fill="#13294b"
+        style="filter: drop-shadow(0 0 5px #FFFFFF) drop-shadow(0 0 10px #13294b);">
     GADGET SAAVY
   </text>
 </svg>
