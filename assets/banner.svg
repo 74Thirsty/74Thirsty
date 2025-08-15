@@ -2,18 +2,18 @@
   <defs>
     <style type="text/css">
       .bg {
-        fill: #0d1117;
+        fill: #4b9cd3;
       }
 
       .glow-rect {
         fill: none;
-        stroke: #ff00cc;
+        stroke: #13294b;
         stroke-width: 4;
         rx: 20;
         ry: 20;
-        filter: drop-shadow(0 0 8px #ff00cc)
-                drop-shadow(0 0 16px #ff00cc)
-                drop-shadow(0 0 32px #ff00cc);
+        filter: drop-shadow(0 0 8px #4b9cd3)
+                drop-shadow(0 0 16px #4b9cd3)
+                drop-shadow(0 0 32px #4b9cd3);
         animation: flickerBorder 2.5s infinite alternate;
       }
 
