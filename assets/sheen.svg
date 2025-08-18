@@ -1,30 +1,54 @@
-<div style="width:1030px; height:120px; overflow:hidden;">
-  <svg viewBox="0 0 1030 120" width="1030" height="120" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="uncSilverUNC" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%"   stop-color="#7BAFD4"/>
-        <stop offset="50%"  stop-color="#C0C0C0"/>
-        <stop offset="100%" stop-color="#7BAFD4"/>
-      </linearGradient>
-      <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
-        <feMerge>
-          <feMergeNode in="blur"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-      </filter>
-    </defs>
+<svg viewBox="0 0 1030 120" width="1030" height="120"
+     xmlns="http://www.w3.org/2000/svg" style="background:#0d1117;">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
 
-    <!-- Hidden line for text path -->
-    <path id="scrollPath" d="M 0 60 L 2060 60" fill="none" stroke="none"/>
+  <!-- Glowing upward "stock chart" line -->
+  <polyline id="chartLine"
+            points="0,100 100,90 200,95 300,70 400,75 500,50 600,55 700,30 800,35 900,15 1030,10"
+            stroke="#7BAFD4" stroke-width="3" fill="none"
+            filter="url(#glow)"
+            stroke-dasharray="1030"
+            stroke-dashoffset="1030">
 
-    <text font-size="28" font-family="Orbitron, sans-serif" fill="url(#uncSilverUNC)" filter="url(#neonGlow)">
-      <textPath href="#scrollPath" startOffset="100%">
-        ⚡ Ephemeral Contract ✅   🔐 Safe Multisig Vault ✅   🧮 RPZE Algorithm ✅
-        🚀 Flashloan Arbitrage Engine ✅   🕶️ Ephemeral Wallet Rotation ✅
-        📊 Graph-Based Discovery ✅   🧩 ML-Enhanced Scoring ✅
-        <animate attributeName="startOffset" from="100%" to="-100%" dur="20s" repeatCount="indefinite"/>
-      </textPath>
-    </text>
-  </svg>
-</div>
+    <!-- Slow trace across -->
+    <animate id="draw"
+             attributeName="stroke-dashoffset"
+             from="1030" to="0"
+             dur="120s"
+             begin="0s;erase.end"
+             fill="freeze"/>
+
+    <!-- Fast erase -->
+    <animate id="erase"
+             attributeName="stroke-dashoffset"
+             from="0" to="-1030"
+             dur="2s"
+             begin="draw.end"
+             fill="freeze"/>
+
+    <!-- Pulse glow (more dramatic: 3 → 8 px) -->
+    <animate attributeName="stroke-width"
+             values="3;8;3"
+             dur="2s"
+             repeatCount="indefinite"/>
+    <animate attributeName="stroke-opacity"
+             values="1;0.6;1"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </polyline>
+
+  <!-- Handle glowing above -->
+  <text x="50%" y="55%" text-anchor="middle"
+        font-family="Orbitron, sans-serif" font-size="40"
+        fill="white" filter="url(#glow)">
+    &lt;/gadget_saavy&gt;
+  </text>
+</svg>
