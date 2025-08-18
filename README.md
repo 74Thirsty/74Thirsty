@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/74Thirsty/74Thirsty/main/assets/banner.svg" width="1000" />
-</p>
+![Sheen Banner](https://raw.githubusercontent.com/74Thirsty/74Thirsty/main/assets/sheen.svg)
 
 
 <p align="center">
