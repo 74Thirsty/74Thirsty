@@ -52,9 +52,7 @@ focus:
 🔹 Hardware wallet + GUI integration
 🔹 Custom logging, async caching, secure wallet rotation
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=74Thirsty&repo=aes-core&theme=tokyonight" />
-</p>
+[![AES Core](https://github-readme-stats.vercel.app/api/pin/?username=74Thirsty&repo=Atomic-Execution-System&theme=tokyonight&show_owner=true)](https://github.com/74Thirsty/Atomic-Execution-System)
 
 ---
 
