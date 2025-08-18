@@ -1,0 +1,33 @@
+<html>
+<body>
+  <div style="width:1030px; height:120px; margin:auto;">
+    <!-- paste SVG here -->
+    <svg viewBox="0 0 1030 120" width="1030" height="120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="uncSilverUNC" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="#7BAFD4"/>
+          <stop offset="50%"  stop-color="#C0C0C0"/>
+          <stop offset="100%" stop-color="#7BAFD4"/>
+        </linearGradient>
+        <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+
+      <path id="scrollPath" d="M 0 60 L 2060 60" fill="none"/>
+      <text font-size="28" font-family="Orbitron, sans-serif" fill="url(#uncSilverUNC)" filter="url(#neonGlow)">
+        <textPath href="#scrollPath" startOffset="100%">
+          ⚡ Ephemeral Contract ✅   🔐 Safe Multisig Vault ✅   🧮 RPZE Algorithm ✅
+          🚀 Flashloan Arbitrage Engine ✅   🕶️ Ephemeral Wallet Rotation ✅
+          📊 Graph-Based Discovery ✅   🧩 ML-Enhanced Scoring ✅
+          <animate attributeName="startOffset" from="100%" to="-100%" dur="20s" repeatCount="indefinite"/>
+        </textPath>
+      </text>
+    </svg>
+  </div>
+</body>
+</html>
