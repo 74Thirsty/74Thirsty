@@ -96,10 +96,7 @@ This step-by-step demo walks you through building secure Solidity contracts, gen
 
 ### 🔗 Let's Connect
 
-* 💬 Bio: [@74Thirsty](https://christopherhirschauer.bio)
-* 🌐 LinkedIn: [linkedin.com/in/profitize](https://linkedin.com/in/profitize)
-* 📧 Email: [c.hirschauer@outlook.com](mailto:c.hirschauer@outlook.com)<br>
-[![Discord Profile](https://discord.c99.nl/widget/theme-3/618846079173001237.png)](https://discordapp.com/users/618846079173001237)
+[![Discord Server](https://discord.com/api/guilds/1266324718093336588/widget.png?style=banner2)](https://discord.gg/nsUMnsdj)
 
 ---
 
