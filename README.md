@@ -1,5 +1,20 @@
 ![Sheen Banner](https://raw.githubusercontent.com/74Thirsty/74Thirsty/main/assets/sheen.svg)
 
+<p align="center">
+
+  <!-- 🔹 ETH Price -->
+  <img src="https://img.shields.io/badge/dynamic/json?color=brightgreen&label=ETH%20Price&query=%24.ethereum.usd&url=https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd" alt="ETH price" />
+
+  <!-- 🔹 Gas Tracker -->
+  <img src="https://img.shields.io/badge/dynamic/json?color=blue&label=Gas%20Price%20(Gwei)&query=%24.result.ProposeGasPrice&url=https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=YourApiKeyToken" alt="Gas price" />
+
+  <!-- 🔹 Flashbots / MEV -->
+  <img src="https://img.shields.io/badge/dynamic/json?color=orange&label=Flashbots%20Status&query=%24.status&url=https://blocks.flashbots.net/v1/status" alt="Flashbots status" />
+
+  <!-- 🔹 Discord -->
+<img src="https://img.shields.io/discord/1266324718093336588?color=7289da&label=Discord&logo=discord&logoColor=white" alt="Discord server" />
+</p>
+
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=74Thirsty&style=flat-square" alt="profile views" />
