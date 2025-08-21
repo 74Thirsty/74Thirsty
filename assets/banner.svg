@@ -2,7 +2,7 @@
   <defs>
     <!-- Inner clip path -->
     <clipPath id="innerClip">
-      <rect x="15" y="15" width="970" height="190" rx="15"/>
+      <rect x="15" y="15" width="970" height="170" rx="15"/>
     </clipPath>
 
     <!-- Styles -->
