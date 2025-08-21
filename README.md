@@ -1,4 +1,4 @@
-![Sheen Banner](https://raw.githubusercontent.com/74Thirsty/74Thirsty/main/assets/sheen.svg)
+![Sheen Banner](https://raw.githubusercontent.com/74Thirsty/74Thirsty/main/assets/banner.svg)
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=74Thirsty&style=flat-square" alt="profile views" />
