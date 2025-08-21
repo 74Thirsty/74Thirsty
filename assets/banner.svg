@@ -2,7 +2,7 @@
   <defs>
     <!-- Inner clip path -->
     <clipPath id="innerClip">
-      <rect x="15" y="15" width="970" height="170" rx="15"/>
+      <rect x="15" y="15" width="970" height="190" rx="15"/>
     </clipPath>
 
     <!-- Styles -->
@@ -17,7 +17,7 @@
 
       .base-rect {
         fill: none;
-        stroke: #13294b;
+        stroke: #00274c;
         stroke-width: 4;
         rx: 20;
         ry: 20;
@@ -53,8 +53,8 @@
           stroke: #4b9cd3;
         }
         18%, 20%, 21% {
-          opacity: 0.2;
-          stroke: #13294b;
+          opacity: 0;
+          stroke: #4b9cd3;
         }
       }
 
