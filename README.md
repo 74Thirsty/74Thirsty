@@ -67,8 +67,7 @@ focus:
 ### 🧠 Featured Algorithms
 
 * [`RPZE`](https://github.com/74Thirsty/aes-core/blob/main/utils/rpzescanner.py): Real-time cycle expansion by profit zone
-* [`Bellman-Ford`](https://github.com/74Thirsty/aes-core/blob/main/utils/bellman_ford.py): Classic negative-cycle search
-* [`BankmanFreedPlugin`](https://github.com/74Thirsty/aes-core/blob/main/plugins/algorithms/bankmanfreed.py): Geo-arbitrage logic inspired by real-world trades
+* [`Custom Repurposed Bellman-Ford`](https://github.com/74Thirsty/aes-core/blob/main/utils/bellman_ford.py): Custom negative-cycle search
 
 ---
 
