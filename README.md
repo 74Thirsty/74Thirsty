@@ -64,10 +64,27 @@ focus:
 
 ---
 
-### 🧠 Featured Algorithms
+### 🧠 Proprietary Innovations
+>* Proprietary integration with Flashbots for bundle submission, utilizing dynamic gas estimation, with built-in calibration for real-time gas adjustments based on the latest blockchain data.
 
-* [`RPZE`](https://github.com/74Thirsty/aes-core/blob/main/utils/rpzescanner.py): Real-time cycle expansion by profit zone
-* [`Custom Repurposed Bellman-Ford`](https://github.com/74Thirsty/aes-core/blob/main/utils/bellman_ford.py): Custom negative-cycle search
+>* Multi-phase cycle validation (including profitability validation, loan validation, and depth calculation) ensures that each cycle is pre-validated before execution, minimizing potential errors and      boosting system reliability.
+
+>* Path filtering based on minimum loan sizes, profitability buffers, and liquidity constraints.
+
+>* Custom logging mechanisms that ensure all cycles, executions, and related actions are thoroughly validated and logge
+
+>* A system that ensures smooth execution across contracts, wallets, and various algorithms, without breaking the core workflow. Specifically, the Executor Wallet handles gas payments and uses             Ephemeral   Wallets for signing transactions, maintaining security while ensuring cost-effective gas management.
+
+>* A reworked version of the classic Bellman-Ford algorithm, optimized to search for negative cycles (i.e., arbitrage opportunities) across decentralized exchanges. The model auto-adjusts gas prices       based on previous execution history, scaling accordingly with the transaction's size and value.
+
+>* Integration of parallel scanning and real-time execution of profitable cycles, ensuring that cycles are validated and executed concurrently for maximum throughput. Streamlined by breaking down tasks    in smaller units and processing them in parallel.
+
+>* Designed to mimic Sam Bankman-Fried's arbitrage strategy, focusing on identifying geographical price discrepancies and routing volume accordingly. This plugin represents an original approach outside    of traditional RPZE or Bellman-Ford strategies.
+
+>* A future innovation where expansion logic is influenced by probabilistic or heuristic methods, integrating real-time validation, early stopping, and inline validation
+
+>* Real-time dynamic expansion of profitable cycles, starting from the highest-yielding edges and expanding as long as the profit increases or stabilizes. This novel approach ensures that paths are        expanded only when profitable, optimizing for reduced computational load and enhanced performance. Provides real-time gas fee adjustments, integrating machine learning to predict the optimal gas        parameters based on transaction value and previous gas prices.
+
 
 ---
 
