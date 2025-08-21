@@ -1,20 +1,50 @@
 <svg width="1000" height="200" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <style type="text/css">
+    <!-- Inner clip path -->
+    <clipPath id="innerClip">
+      <rect x="15" y="15" width="970" height="170" rx="15"/>
+    </clipPath>
+
+    <!-- Styles -->
+    <style>
       .bg {
         fill: #0d1117;
       }
 
-      .glow-rect {
+      .container {
+        position: relative;
+      }
+
+      .base-rect {
         fill: none;
         stroke: #13294b;
         stroke-width: 4;
         rx: 20;
         ry: 20;
-        filter: drop-shadow(0 0 8px #4b9cd3)
-                drop-shadow(0 0 16px #4b9cd3)
-                drop-shadow(0 0 32px #4b9cd3);
-        animation: flickerBorder 2.5s infinite alternate;
+      }
+
+      .glow-layer {
+        fill: none;
+        stroke: #4b9cd3;
+        stroke-width: 4;
+        rx: 20;
+        ry: 20;
+        pointer-events: none;
+      }
+
+      .glow-strong {
+        filter: blur(4px);
+        opacity: 0.8;
+      }
+
+      .glow-medium {
+        filter: blur(8px);
+        opacity: 0.6;
+      }
+
+      .glow-weak {
+        filter: blur(12px);
+        opacity: 0.4;
       }
 
       @keyframes flickerBorder {
@@ -27,17 +57,30 @@
           stroke: #13294b;
         }
       }
+
+      .animated-glow {
+        animation: flickerBorder 2.5s infinite alternate;
+      }
     </style>
   </defs>
 
   <!-- Background -->
-  <rect class="bg" width="1000" height="200" />
+  <rect class="bg" width="1000" height="200"/>
 
-  <!-- 🔥 Flickering neon border -->
-  <rect class="glow-rect" x="5" y="5" width="990" height="190" />
+  <!-- Container with inner glow -->
+  <g class="container">
+    <!-- Glow layers -->
+    <g clip-path="url(#innerClip)">
+      <rect class="glow-layer glow-strong animated-glow" x="5" y="5" width="990" height="190"/>
+      <rect class="glow-layer glow-medium animated-glow" x="5" y="5" width="990" height="190"/>
+      <rect class="glow-layer glow-weak animated-glow" x="5" y="5" width="990" height="190"/>
+    </g>
 
-  <!-- ✨ Your original banner text and elements go BELOW this line -->
-  <!-- Example: -->
+    <!-- Base rectangle (placed on top of glow layers) -->
+    <rect class="base-rect" x="5" y="5" width="990" height="190"/>
+  </g>
+
+  <!-- Text -->
   <text x="500" y="115" text-anchor="middle"
         font-family="Orbitron, Roboto"
         font-size="64px"
