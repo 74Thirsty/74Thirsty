@@ -1,0 +1,295 @@
+<!-- File: assets/gnoman_banner.svg -->
+<!-- GNOMAN animated storm banner — lightning, flicker, neon glow -->
+<!-- Author: Christopher Hirschauer (c) 2025. All rights reserved. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-labelledby="title desc">
+  <title id="title">GNOMAN — animated lightning banner</title>
+  <desc id="desc">A dark, stormy animated banner with lightning strikes and an evil neon glow around the word GNOMAN.</desc>
+
+  <style>
+    :root{
+      --bg-start:#0a0b10;
+      --bg-end:#131520;
+      --glow1:#ea002a;   /* primary hellfire glow */
+      --glow2:#710017;   /* inner hellfire glow */
+      --text-fill1:#f7f7f7;
+      --text-fill2:#dddddd;
+      --stroke:#980019;
+      --bolt:#9fdcff;    /* lightning blue */
+      --bolt-core:#dff6ff;
+      --accent:#bd0f2e;
+    }
+
+    /* Background pulse, subtle vignetting */
+    @keyframes bgPulse {
+      0%,100% { opacity: 0.9 }
+      50%     { opacity: 1.0 }
+    }
+
+    /* Flicker for the wordmark */
+    @keyframes evilFlicker {
+      0% {   filter: url(#glow-outer);   opacity: 1 }
+      5% {   filter: url(#glow-inner);   opacity: .92 }
+      8% {   filter: url(#glow-outer);   opacity: 1 }
+      10%{   filter: url(#glow-inner);   opacity: .88 }
+      12%{   filter: url(#glow-outer);   opacity: 1 }
+      13%{   filter: url(#glow-inner);   opacity: .95 }
+      20%{   filter: url(#glow-outer);   opacity: 1 }
+      21%{   filter: url(#glow-inner);   opacity: .9 }
+      23%{   filter: url(#glow-outer);   opacity: 1 }
+      38%{   filter: url(#glow-outer);   opacity: 1 }
+      39%{   filter: url(#glow-inner);   opacity: .84 }
+      40%{   filter: url(#glow-outer);   opacity: 1 }
+      100%{  filter: url(#glow-outer);   opacity: 1 }
+    }
+
+    /* Micro jitter to feel unstable */
+    @keyframes jitter {
+      0%   { transform: translate(0px,0px) }
+      20%  { transform: translate(.4px,-.2px) }
+      40%  { transform: translate(-.3px,.2px) }
+      60%  { transform: translate(.2px,.4px) }
+      80%  { transform: translate(-.4px,-.2px) }
+      100% { transform: translate(0px,0px) }
+    }
+
+    /* Lightning flash overlay */
+    @keyframes flash {
+      0%,97%,100% { opacity: 0 }
+      2%,3%       { opacity: .9 }
+      7%          { opacity: .25 }
+    }
+
+    /* Lightning visibility timing per bolt */
+    .bolt {
+      opacity: 0;
+      filter: url(#bolt-glow);
+    }
+    .bolt.b1 { animation: bolt1 6.5s infinite ease-in-out; }
+    .bolt.b2 { animation: bolt2 7.25s infinite ease-in-out; }
+    .bolt.b3 { animation: bolt3 8.5s infinite ease-in-out; }
+
+    @keyframes bolt1 {
+      0%, 6% { opacity: 0 }
+      6.1% { opacity: 1 }
+      6.7% { opacity: .45 }
+      7.2% { opacity: 0 }
+      100% { opacity: 0 }
+    }
+    @keyframes bolt2 {
+      0%, 12% { opacity: 0 }
+      12.2% { opacity: 1 }
+      12.9% { opacity: .3 }
+      13.5% { opacity: 0 }
+      100%  { opacity: 0 }
+    }
+    @keyframes bolt3 {
+      0%, 19% { opacity: 0 }
+      19.3% { opacity: 1 }
+      19.9% { opacity: .4 }
+      20.6% { opacity: 0 }
+      100%  { opacity: 0 }
+    }
+
+    /* Subheading subtle scan/flicker */
+    @keyframes scan {
+      0%,100% { opacity: .9; letter-spacing: 3px }
+      50%     { opacity: 1;  letter-spacing: 5px }
+    }
+
+    /* Scene container */
+    .scene { animation: bgPulse 12s ease-in-out infinite; }
+
+    /* Wordmark styling (fallback to bold sans if special fonts absent) */
+    .wordmark {
+      font: 900 160px/1.0 "Impact", "Haettenschweiler", "Arial Black", "Anton", system-ui, sans-serif;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      fill: url(#textGradient);
+      stroke: var(--stroke);
+      stroke-width: 3;
+      paint-order: stroke fill;
+      animation: evilFlicker 6.5s infinite steps(1,end), jitter 3s infinite linear;
+    }
+
+    .sub {
+      font: 700 20px/1.1 "Arial Black", system-ui, sans-serif;
+      fill: #c7cad1;
+      text-shadow: 0 0 2px #fff;
+      letter-spacing: 3px;
+      animation: scan 4.5s infinite ease-in-out;
+    }
+  </style>
+
+  <defs>
+    <!-- Metallic text gradient -->
+    <linearGradient id="textGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="var(--text-fill1)"/>
+      <stop offset="60%" stop-color="var(--text-fill2)"/>
+      <stop offset="100%" stop-color="#cfcfcf"/>
+    </linearGradient>
+
+    <!-- Background radial gradient -->
+    <radialGradient id="bgRadial" cx="50%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#1b1e2b"/>
+      <stop offset="60%" stop-color="var(--bg-start)"/>
+      <stop offset="100%" stop-color="var(--bg-end)"/>
+    </radialGradient>
+
+    <!-- Storm clouds (noise) -->
+    <filter id="clouds" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015 0.05" numOctaves="3" seed="42" result="noise"/>
+      <feColorMatrix type="matrix" values="
+        0 0 0 0  0.60
+        0 0 0 0  0.67
+        0 0 0 0  0.77
+        0 0 0 1 -0.3" />
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.6"/>
+      </feComponentTransfer>
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+
+    <!-- Outer/inner hellfire glow for text -->
+    <filter id="glow-outer" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="b1"/>
+      <feFlood flood-color="var(--glow1)" flood-opacity="1" result="c1"/>
+      <feComposite in="c1" in2="b1" operator="in" result="g1"/>
+      <feMerge>
+        <feMergeNode in="g1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-inner" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b2"/>
+      <feFlood flood-color="var(--glow2)" flood-opacity="1" result="c2"/>
+      <feComposite in="c2" in2="b2" operator="in" result="g2"/>
+      <feMerge>
+        <feMergeNode in="g2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Electric bolt glow -->
+    <filter id="bolt-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feColorMatrix type="matrix" values="
+        0 0 0 0 0.75
+        0 0 0 0 0.88
+        0 0 0 0 1.00
+        0 0 0 1 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="b"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle chromatic aberration on wordmark -->
+    <filter id="aberrate" x="-10%" y="-10%" width="120%" height="120%">
+      <feOffset in="SourceGraphic" dx="0" dy="0" result="base"/>
+      <feColorMatrix in="base" type="matrix"
+        values="1 0 0 0 0.02
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 1 0" result="r"/>
+      <feOffset in="r" dx="1" dy="0" result="r2"/>
+      <feMerge>
+        <feMergeNode in="r2"/>
+        <feMergeNode in="base"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Stormy background -->
+  <rect width="1200" height="420" fill="url(#bgRadial)"/>
+  <rect width="1200" height="420" filter="url(#clouds)" opacity=".45"/>
+
+  <!-- Random flash overlay (brief white flashes) -->
+  <rect width="1200" height="420" fill="#fff" style="mix-blend-mode: screen" opacity="0">
+    <animate attributeName="opacity" values="0;0.9;0.25;0" keyTimes="0;0.02;0.07;1" dur="6.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Lightning group -->
+  <g class="scene">
+    <!-- Bolt #1 -->
+    <g class="bolt b1">
+      <path d="M 980 10
+               L 960 60
+               L 1020 95
+               L 980 150
+               L 1040 185
+               L 1000 240
+               L 1060 270
+               L 1045 305" 
+            fill="none" stroke="var(--bolt)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M 980 10
+               L 960 60
+               L 1020 95
+               L 980 150
+               L 1040 185
+               L 1000 240
+               L 1060 270
+               L 1045 305" 
+            fill="none" stroke="var(--bolt-core)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+    </g>
+
+    <!-- Bolt #2 -->
+    <g class="bolt b2">
+      <path d="M 150 30
+               L 170 70
+               L 120 110
+               L 180 150
+               L 140 200
+               L 210 240
+               L 190 300" 
+            fill="none" stroke="var(--bolt)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M 150 30
+               L 170 70
+               L 120 110
+               L 180 150
+               L 140 200
+               L 210 240
+               L 190 300" 
+            fill="none" stroke="var(--bolt-core)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+    </g>
+
+    <!-- Bolt #3 (forked) -->
+    <g class="bolt b3">
+      <path d="M 620 0
+               L 600 40
+               L 660 70
+               L 640 110
+               L 700 150
+               L 670 200" 
+            fill="none" stroke="var(--bolt)" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M 640 110 L 620 145" fill="none" stroke="var(--bolt)" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M 640 110 L 660 140" fill="none" stroke="var(--bolt)" stroke-width="3.5" stroke-linecap="round"/>
+
+      <path d="M 620 0
+               L 600 40
+               L 660 70
+               L 640 110
+               L 700 150
+               L 670 200" 
+            fill="none" stroke="var(--bolt-core)" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M 640 110 L 620 145" fill="none" stroke="var(--bolt-core)" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M 640 110 L 660 140" fill="none" stroke="var(--bolt-core)" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- GNOMAN Wordmark -->
+  <g transform="translate(80, 265)" filter="url(#aberrate)">
+    <text class="wordmark">GNOMAN</text>
+  </g>
+
+  <!-- Subheading -->
+  <g transform="translate(86, 330)">
+    <text class="sub">SAFE • WALLET • KEYS • HOLD24H</text>
+  </g>
+
+  <!-- Bottom accent line with subtle glow -->
+  <g opacity=".8">
+    <rect x="60" y="360" width="1080" height="2" fill="var(--accent)"/>
+    <rect x="60" y="360" width="1080" height="2" fill="var(--accent)" filter="url(#glow-inner)" opacity=".8"/>
+  </g>
+</svg>
