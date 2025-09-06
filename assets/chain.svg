@@ -1,0 +1,324 @@
+<svg width="1600" height="600" viewBox="0 0 1600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- UNC gradient for the headline -->
+    <linearGradient id="uncText" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7BAFD4"/>
+      <stop offset="100%" stop-color="#E6F2FA"/>
+    </linearGradient>
+
+    <!-- 4 jagged hole variants (NES/Genesis style) -->
+    <g id="hShape1">
+      <path d="M-18,-6 L-12,-16 L-2,-22 L12,-20 L20,-12 L22,-2 L16,12 L4,20 L-10,18 L-18,8 Z"
+            fill="#555" stroke="#222" stroke-width="3"/>
+      <circle r="9" fill="#111"/>
+    </g>
+    <g id="hShape2">
+      <path d="M-20,-4 L-14,-14 L-4,-24 L14,-18 L22,-10 L20,0 L14,14 L0,22 L-12,16 L-20,6 Z"
+            fill="#555" stroke="#222" stroke-width="3"/>
+      <circle r="10" fill="#111"/>
+    </g>
+    <g id="hShape3">
+      <path d="M-16,-5 L-10,-15 L-2,-22 L10,-20 L18,-12 L20,-2 L14,10 L2,18 L-8,20 L-16,10 Z"
+            fill="#555" stroke="#222" stroke-width="3"/>
+      <circle r="8" fill="#111"/>
+    </g>
+    <g id="hShape4">
+      <path d="M-22,-5 L-12,-18 L-2,-24 L16,-22 L20,-14 L22,-4 L14,14 L0,22 L-12,18 L-20,6 Z"
+            fill="#555" stroke="#222" stroke-width="3"/>
+      <circle r="9" fill="#111"/>
+    </g>
+
+    <style>
+      .gang-font { font-family: "Black Ops One", Impact, Haettenschweiler, "Arial Black", sans-serif; }
+      .blood { fill:#8a0e12; stroke:#3a0506; stroke-width:1.5; }
+      .halo { fill:#7f8690; }
+    </style>
+  </defs>
+
+  <!-- Big headline -->
+  <text class="gang-font" x="800" y="320" text-anchor="middle"
+        font-size="190" fill="url(#uncText)" stroke="#13294B" stroke-width="12">
+     CLOUD⛓️CHAIN
+  </text>
+
+  <!-- 17-shot chaotic spray with dust halos (fade out) -->
+  <g id="spray">
+    <!-- helper: each shot = <g translate rotate><g scale(0)> halo + hole + animateTransform -->
+    <!-- Shot 1 -->
+    <g transform="translate(380,210) rotate(-10)">
+      <g transform="scale(0)">
+        <circle r="34" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="0.50s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="0.58s" fill="freeze"/>
+        </circle>
+        <use href="#hShape1"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="0.50s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Shot 2 -->
+    <g transform="translate(440,195) rotate(15)">
+      <g transform="scale(0)">
+        <circle r="32" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="0.55s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="0.63s" fill="freeze"/>
+        </circle>
+        <use href="#hShape2"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="0.55s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Shot 3 -->
+    <g transform="translate(510,225) rotate(-25)">
+      <g transform="scale(0)">
+        <circle r="33" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="0.60s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="0.68s" fill="freeze"/>
+        </circle>
+        <use href="#hShape3"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="0.60s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Shot 4 -->
+    <g transform="translate(580,210) rotate(8)">
+      <g transform="scale(0)">
+        <circle r="34" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="0.65s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="0.73s" fill="freeze"/>
+        </circle>
+        <use href="#hShape4"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="0.65s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Shot 5 -->
+    <g transform="translate(640,240) rotate(-18)">
+      <g transform="scale(0)">
+        <circle r="35" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="0.70s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="0.78s" fill="freeze"/>
+        </circle>
+        <use href="#hShape2"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="0.70s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Shot 6 -->
+    <g transform="translate(700,200) rotate(12)">
+      <g transform="scale(0)">
+        <circle r="33" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="0.75s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="0.83s" fill="freeze"/>
+        </circle>
+        <use href="#hShape1"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="0.75s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Shot 7 -->
+    <g transform="translate(760,230) rotate(-20)">
+      <g transform="scale(0)">
+        <circle r="32" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="0.80s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="0.88s" fill="freeze"/>
+        </circle>
+        <use href="#hShape3"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="0.80s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Shot 8 -->
+    <g transform="translate(820,220) rotate(5)">
+      <g transform="scale(0)">
+        <circle r="34" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="0.85s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="0.93s" fill="freeze"/>
+        </circle>
+        <use href="#hShape4"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="0.85s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Shot 9 -->
+    <g transform="translate(880,250) rotate(-12)">
+      <g transform="scale(0)">
+        <circle r="36" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="0.90s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="0.98s" fill="freeze"/>
+        </circle>
+        <use href="#hShape2"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="0.90s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Shot 10 -->
+    <g transform="translate(940,210) rotate(20)">
+      <g transform="scale(0)">
+        <circle r="34" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="0.95s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="1.03s" fill="freeze"/>
+        </circle>
+        <use href="#hShape1"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="0.95s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Shot 11 -->
+    <g transform="translate(1000,240) rotate(-15)">
+      <g transform="scale(0)">
+        <circle r="35" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="1.00s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="1.08s" fill="freeze"/>
+        </circle>
+        <use href="#hShape3"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="1.00s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Shot 12 -->
+    <g transform="translate(1060,200) rotate(25)">
+      <g transform="scale(0)">
+        <circle r="33" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="1.05s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="1.13s" fill="freeze"/>
+        </circle>
+        <use href="#hShape4"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="1.05s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Shot 13 -->
+    <g transform="translate(1120,225) rotate(-8)">
+      <g transform="scale(0)">
+        <circle r="34" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="1.10s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="1.18s" fill="freeze"/>
+        </circle>
+        <use href="#hShape2"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="1.10s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Shot 14 -->
+    <g transform="translate(1180,215) rotate(10)">
+      <g transform="scale(0)">
+        <circle r="33" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="1.15s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="1.23s" fill="freeze"/>
+        </circle>
+        <use href="#hShape1"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="1.15s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Shot 15 -->
+    <g transform="translate(1240,240) rotate(-22)">
+      <g transform="scale(0)">
+        <circle r="36" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="1.20s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="1.28s" fill="freeze"/>
+        </circle>
+        <use href="#hShape3"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="1.20s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Shot 16 -->
+    <g transform="translate(1310,205) rotate(18)">
+      <g transform="scale(0)">
+        <circle r="34" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="1.25s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="1.33s" fill="freeze"/>
+        </circle>
+        <use href="#hShape4"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="1.25s" fill="freeze"/>
+      </g>
+    </g>
+
+    <!-- Shot 17 -->
+    <g transform="translate(1380,230) rotate(-14)">
+      <g transform="scale(0)">
+        <circle r="35" class="halo" opacity="0">
+          <animate attributeName="opacity" from="0" to="0.22" dur="0.08s" begin="1.30s" fill="freeze"/>
+          <animate attributeName="opacity" from="0.22" to="0.06" dur="0.30s" begin="1.38s" fill="freeze"/>
+        </circle>
+        <use href="#hShape2"/>
+        <animateTransform attributeName="transform" type="scale" from="0" to="1" dur="0.08s" begin="1.30s" fill="freeze"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- BLOOD OOZE: begins ~1.5s after last shot finishes -> 1.38s + 1.5s = 2.88s -->
+  <!-- Drips under a selection of holes for variety -->
+  <g id="blood">
+    <!-- Under Shot 3 (510,225) -->
+    <g transform="translate(510,225)">
+      <!-- stem -->
+      <rect class="blood" x="-2" y="10" width="4" height="0">
+        <animate attributeName="height" from="0" to="40" dur="0.5s" begin="2.88s" fill="freeze"/>
+      </rect>
+      <!-- bead -->
+      <circle class="blood" cx="0" cy="50" r="0">
+        <animate attributeName="r" from="0" to="5" dur="0.2s" begin="2.88s" fill="freeze"/>
+        <!-- little fall -->
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="0,15" dur="0.35s" begin="3.08s" fill="freeze"/>
+      </circle>
+    </g>
+
+    <!-- Under Shot 5 (640,240) -->
+    <g transform="translate(640,240)">
+      <rect class="blood" x="1" y="12" width="3" height="0">
+        <animate attributeName="height" from="0" to="28" dur="0.5s" begin="2.88s" fill="freeze"/>
+      </rect>
+      <circle class="blood" cx="2.5" cy="40" r="0">
+        <animate attributeName="r" from="0" to="4" dur="0.2s" begin="2.88s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="0,12" dur="0.30s" begin="3.08s" fill="freeze"/>
+      </circle>
+    </g>
+
+    <!-- Under Shot 8 (820,220) -->
+    <g transform="translate(820,220)">
+      <rect class="blood" x="-1.5" y="10" width="3" height="0">
+        <animate attributeName="height" from="0" to="34" dur="0.5s" begin="2.88s" fill="freeze"/>
+      </rect>
+      <circle class="blood" cx="0" cy="44" r="0">
+        <animate attributeName="r" from="0" to="5" dur="0.2s" begin="2.88s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="0,16" dur="0.35s" begin="3.08s" fill="freeze"/>
+      </circle>
+    </g>
+
+    <!-- Under Shot 11 (1000,240) -->
+    <g transform="translate(1000,240)">
+      <rect class="blood" x="-2" y="12" width="4" height="0">
+        <animate attributeName="height" from="0" to="42" dur="0.55s" begin="2.88s" fill="freeze"/>
+      </rect>
+      <circle class="blood" cx="0" cy="54" r="0">
+        <animate attributeName="r" from="0" to="6" dur="0.22s" begin="2.88s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="0,18" dur="0.40s" begin="3.10s" fill="freeze"/>
+      </circle>
+    </g>
+
+    <!-- Under Shot 14 (1180,215) -->
+    <g transform="translate(1180,215)">
+      <rect class="blood" x="0" y="10" width="3" height="0">
+        <animate attributeName="height" from="0" to="30" dur="0.5s" begin="2.88s" fill="freeze"/>
+      </rect>
+      <circle class="blood" cx="1.5" cy="40" r="0">
+        <animate attributeName="r" from="0" to="4.5" dur="0.2s" begin="2.88s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="0,14" dur="0.32s" begin="3.08s" fill="freeze"/>
+      </circle>
+    </g>
+
+    <!-- Under Shot 17 (1380,230) -->
+    <g transform="translate(1380,230)">
+      <rect class="blood" x="-1" y="12" width="2" height="0">
+        <animate attributeName="height" from="0" to="26" dur="0.5s" begin="2.88s" fill="freeze"/>
+      </rect>
+      <circle class="blood" cx="0" cy="38" r="0">
+        <animate attributeName="r" from="0" to="3.8" dur="0.2s" begin="2.88s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" from="0,0" to="0,10" dur="0.28s" begin="3.08s" fill="freeze"/>
+      </circle>
+    </g>
+  </g>
+</svg>
