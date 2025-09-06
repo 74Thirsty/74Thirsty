@@ -52,6 +52,10 @@ focus:
 🔹 Custom logging, async caching, secure wallet rotation
 
 [![AES Core](https://github-readme-stats.vercel.app/api/pin/?username=74Thirsty&repo=Atomic-Execution-System&theme=tokyonight&show_owner=true&cache_seconds=60)](https://github.com/74Thirsty/Atomic-Execution-System)
+[![gnoman-cli](https://github-readme-stats.vercel.app/api/pin/?username=74Thirsty&repo=gnoman-cli&theme=tokyonight&show_owner=true&cache_seconds=60)](https://github.com/74Thirsty/gnoman-cli)
+[![cloudchain-cli](https://github-readme-stats.vercel.app/api/pin/?username=74Thirsty&repo=cloudchain-cli&theme=tokyonight&show_owner=true&cache_seconds=60)](https://github.com/74Thirsty/cloudchain-cli)
+
+
 
 ---
 
