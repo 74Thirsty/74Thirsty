@@ -234,6 +234,10 @@
     <rect x="60" y="360" width="1080" height="2" fill="var(--accent)" filter="url(#glow-inner)" opacity=".8"/>
   </g>
 
-  <image href="assets/gnoman-transparent.png" x="1000" y="36" width="140" height="140" opacity="0.12"/>
+<image
+  href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAYAAAB/HSuDAAAABmJLR0QA/wD/AP+gvaeTAACAAElEQVR42my90YIku61jS6rm/z/YPineB2EBjPb"
+  x="1000" y="36"
+  width="140" height="140"
+  opacity="0.12"/>
   
 </svg>
