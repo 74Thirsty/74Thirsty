@@ -1,0 +1,84 @@
+<svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#161b22" />
+    </linearGradient>
+
+    <!-- Cyan glow -->
+    <filter id="glowCyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Pink underglow (subtle) -->
+    <filter id="pinkUnder" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+      <feOffset in="blur" dx="0" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#ff2a9d" flood-opacity="0.8"/>
+      <feComposite in2="offsetBlur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Animations -->
+    <style><![CDATA[
+      @keyframes dash {
+        to { stroke-dashoffset: -20; }
+      }
+      @keyframes pulse {
+        0% { r: 2; opacity: 0.3; }
+        50% { r: 5; opacity: 1; }
+        100% { r: 2; opacity: 0.3; }
+      }
+      .trace { stroke-dasharray: 8; animation: dash 3s linear infinite; }
+      .node { animation: pulse 2s infinite; }
+      .title { animation: float 3s ease-in-out infinite; }
+      @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-4px); }
+        100% { transform: translateY(0); }
+      }
+    ]]></style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+
+  <!-- Circuit border -->
+  <g stroke="#00ffff" stroke-width="2" fill="none" filter="url(#glowCyan)" opacity="0.6">
+    <polyline class="trace" points="50,30 200,30 220,50 580,50 600,30 750,30" />
+    <polyline class="trace" points="50,220 200,220 220,200 580,200 600,220 750,220" />
+    <polyline class="trace" points="50,30 50,100 70,120 70,170 50,190 50,220" />
+    <polyline class="trace" points="750,30 750,100 730,120 730,170 750,190 750,220" />
+  </g>
+
+  <!-- Nodes -->
+  <g fill="#00ffff" filter="url(#glowCyan)">
+    <circle cx="50" cy="30" r="3" class="node"/>
+    <circle cx="200" cy="30" r="3" class="node"/>
+    <circle cx="220" cy="50" r="3" class="node"/>
+    <circle cx="580" cy="50" r="3" class="node"/>
+    <circle cx="600" cy="30" r="3" class="node"/>
+    <circle cx="750" cy="30" r="3" class="node"/>
+    <circle cx="50" cy="220" r="3" class="node"/>
+    <circle cx="200" cy="220" r="3" class="node"/>
+    <circle cx="220" cy="200" r="3" class="node"/>
+    <circle cx="580" cy="200" r="3" class="node"/>
+    <circle cx="600" cy="220" r="3" class="node"/>
+    <circle cx="750" cy="220" r="3" class="node"/>
+  </g>
+
+  <!-- PHREAK with pink underglow and cyan stroke -->
+  <text x="400" y="140" text-anchor="middle" font-family="monospace" font-size="80"
+        fill="none" stroke="#00ffff" stroke-width="2"
+        filter="url(#pinkUnder)" class="title">
+    PHREAK
+  </text>
+</svg>
