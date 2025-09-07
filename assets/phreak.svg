@@ -1,11 +1,5 @@
 <svg width="800" height="250" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background -->
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#161b22" />
-    </linearGradient>
-
     <!-- Cyan glow -->
     <filter id="glowCyan" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="2" result="blur"/>
@@ -15,7 +9,7 @@
       </feMerge>
     </filter>
 
-    <!-- Pink underglow (subtle) -->
+    <!-- Pink underglow -->
     <filter id="pinkUnder" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
       <feOffset in="blur" dx="0" dy="2" result="offsetBlur"/>
@@ -47,9 +41,6 @@
       }
     ]]></style>
   </defs>
-
-  <!-- Background -->
-  <rect width="100%" height="100%" fill="url(#bgGradient)" />
 
   <!-- Circuit border -->
   <g stroke="#00ffff" stroke-width="2" fill="none" filter="url(#glowCyan)" opacity="0.6">
