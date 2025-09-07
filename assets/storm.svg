@@ -1,0 +1,86 @@
+<!-- File: assets/gnoman_storm_banner.svg -->
+<svg width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Moody sky -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#070711"/>
+      <stop offset="60%" stop-color="#05050B"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+
+    <!-- Cloud texture -->
+    <filter id="clouds">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="5" seed="7" result="noise"/>
+      <feColorMatrix type="matrix" values="
+        0 0 0 0 0.10
+        0 0 0 0 0.10
+        0 0 0 0 0.16
+        0 0 0 0.90 0"/>
+    </filter>
+
+    <!-- Bolt glow (core + halo) -->
+    <filter id="boltGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <style>
+      .halo   { stroke:#7ec8ff; stroke-width:12; opacity:.28; filter:url(#boltGlow); }
+      .core   { stroke:#ffffff; stroke-width:4;  filter:url(#boltGlow); }
+      .branch { stroke-width:2.6; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#sky)"/>
+  <rect width="1280" height="640" fill="#000" opacity="0.15" filter="url(#clouds)"/>
+
+  <!-- Bolt cluster A (center-right) -->
+  <g>
+    <polyline class="halo" fill="none"
+      points="860,0 835,120 880,205 845,290 890,360 860,430"/>
+    <polyline class="core" fill="none"
+      points="860,0 835,120 880,205 845,290 890,360 860,430"/>
+    <polyline class="core branch" fill="none"
+      points="880,205 920,250 905,295"/>
+    <polyline class="core branch" fill="none"
+      points="845,290 815,330 835,370"/>
+  </g>
+
+  <!-- Bolt cluster B (left) -->
+  <g>
+    <polyline class="halo" fill="none"
+      points="320,0 345,140 305,240 350,330 320,420"/>
+    <polyline class="core" fill="none"
+      points="320,0 345,140 305,240 350,330 320,420"/>
+    <polyline class="core branch" fill="none"
+      points="345,140 385,185 365,225"/>
+  </g>
+
+  <!-- Bolt cluster C (far right) -->
+  <g>
+    <polyline class="halo" fill="none"
+      points="1120,0 1100,110 1125,215 1095,315 1115,420"/>
+    <polyline class="core" fill="none"
+      points="1120,0 1100,110 1125,215 1095,315 1115,420"/>
+    <polyline class="core branch" fill="none"
+      points="1125,215 1160,260 1140,300"/>
+    <polyline class="core branch" fill="none"
+      points="1095,315 1070,355 1088,395"/>
+  </g>
+
+  <!-- Subtle horizon mist -->
+  <rect y="540" width="1280" height="100" fill="#0a1120" opacity="0.28"/>
+
+  <!-- GNOMAN watermark (PNG with transparent bg). Put this file in assets/ -->
+  <image href="assets/gnoman-transparent.png"
+         x="1080" y="40" width="140" height="140" opacity="0.16"/>
+
+  <!-- Optional title (remove if you want it pure) -->
+  <!--
+  <text x="60" y="110" fill="#cfe9ff" font-family="Inter,Segoe UI,Arial,sans-serif"
+        font-size="46" letter-spacing="1.2" opacity="0.9">
+    GNOMAN / CloudChain
+  </text>
+  -->
+</svg>
