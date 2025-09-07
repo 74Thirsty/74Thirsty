@@ -234,7 +234,6 @@
     <rect x="60" y="360" width="1080" height="2" fill="var(--accent)" filter="url(#glow-inner)" opacity=".8"/>
   </g>
 
-  <!-- OPTIONAL watermark image (uncomment & add file to assets/)
   <image href="assets/gnoman-transparent.png" x="1000" y="36" width="140" height="140" opacity="0.12"/>
-  -->
+  
 </svg>
