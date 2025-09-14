@@ -7,7 +7,6 @@
 </p>
 
 [![2021-12-09-13-57-IMG-0249-removebg-preview.png](https://i.postimg.cc/PqX0VNsZ/2021-12-09-13-57-IMG-0249-removebg-preview.png)](https://postimg.cc/XrP2pjv7)
-[![Chat-GPT-Image-Sep-3-2025-09-34-14-PM-removebg-preview.png](https://i.postimg.cc/Y9hrVdK1/Chat-GPT-Image-Sep-3-2025-09-34-14-PM-removebg-preview.png)](https://postimg.cc/k6PPRF54)
 
 
 > <p><strong>Christopher Hirschauer</strong><br>
