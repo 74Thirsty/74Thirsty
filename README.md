@@ -6,9 +6,7 @@
   <a href="https://github.com/74Thirsty?tab=repositories"><img src="https://img.shields.io/github/followers/74Thirsty?style=flat-square&logo=github"></a>
 </p>
 
-<p align="center">
-  <img src="https://i.postimg.cc/SQVRgDcg/IMG-1006.png" width="250" />
-</p>
+[![2021-12-09-13-57-IMG-0249-removebg-preview.png](https://i.postimg.cc/PqX0VNsZ/2021-12-09-13-57-IMG-0249-removebg-preview.png)](https://postimg.cc/XrP2pjv7)
 
 > <p><strong>Christopher Hirschauer</strong><br>
 > Builder @ the bleeding edge of MEV, automation, and high-speed arbitrage.<br>
