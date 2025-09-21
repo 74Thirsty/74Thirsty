@@ -62,8 +62,6 @@ focus:
   </a>
 </div>
 
-<div class="smashwords-widget" data-type="single" data-items="book:1860441" data-font="sans" data-ribboncolor="#4181c3" data-bgcolor="#fafafa" data-buttoncolor="#ffc801" data-width="300" data-height="250" data-headline="Tokenization of Real-World Assets" style="width: 300px; height: 250px;"></div>
-<script id="smashwords-widget-js" async="async" src="//www.smashwidgets.com/1/widgets.js"></script>
 ---
 
 ### 📊 GitHub Stats
