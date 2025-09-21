@@ -52,19 +52,20 @@
                       repeatCount="indefinite"/>
   </path>
 
-  <!-- Veins -->
-  <g stroke="url(#blood)" stroke-width="6" fill="none" stroke-linecap="round" filter="url(#glow)">
-    <path d="M640,150 Q750,100 880,60">
-      <animate attributeName="stroke-width" values="6;12;6" dur="1s" repeatCount="indefinite"/>
+  <!-- Squiggly veins (left and right only) -->
+  <g stroke="url(#blood)" fill="none" stroke-linecap="round" filter="url(#glow)">
+    <!-- Right vein -->
+    <path d="M640,160 
+             C700,140 750,180 800,150 
+             C850,120 950,190 1100,160">
+      <animate attributeName="stroke-width" values="4;12;4" dur="1s" repeatCount="indefinite"/>
     </path>
-    <path d="M640,180 Q760,230 900,260">
-      <animate attributeName="stroke-width" values="6;12;6" dur="1s" repeatCount="indefinite"/>
-    </path>
-    <path d="M560,150 Q450,100 320,60">
-      <animate attributeName="stroke-width" values="6;12;6" dur="1s" repeatCount="indefinite"/>
-    </path>
-    <path d="M560,180 Q440,230 280,260">
-      <animate attributeName="stroke-width" values="6;12;6" dur="1s" repeatCount="indefinite"/>
+
+    <!-- Left vein -->
+    <path d="M560,160 
+             C500,140 450,190 400,150 
+             C350,120 250,190 100,160">
+      <animate attributeName="stroke-width" values="4;12;4" dur="1s" repeatCount="indefinite"/>
     </path>
   </g>
 
