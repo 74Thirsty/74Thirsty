@@ -1,91 +1,59 @@
 <svg width="1200" height="400" viewBox="0 0 1200 400"
      xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <!-- Background -->
-    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
-      <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#050608"/>
-    </radialGradient>
+  <style>
+    @keyframes rotateMoon {from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+    @keyframes glowPulse {
+      0%,100% {opacity:1;}
+      50% {opacity:0.6;}
+    }
+    @keyframes moveComet {
+      0%   {offset-distance:0%; opacity:0;}
+      10%  {opacity:1;}
+      50%  {opacity:1;}
+      80%  {opacity:.5;}
+      100% {offset-distance:100%; opacity:0;}
+    }
+    .sigil {
+      fill:none;
+      stroke:#c0d4ff;
+      stroke-width:2;
+      opacity:0.8;
+      animation:glowPulse 4s infinite ease-in-out;
+    }
+    .planet {
+      transform-origin:600px 200px;
+      animation:rotateMoon 24s linear infinite;
+    }
+    .textMain {
+      fill:#e6ebff;
+      font-family:'Garamond','Times New Roman',serif;
+      font-size:72px;
+      text-anchor:middle;
+      letter-spacing:3px;
+    }
+    .textSub {
+      fill:#9aa7c9;
+      font-family:'Garamond','Times New Roman',serif;
+      font-size:28px;
+      text-anchor:middle;
+      letter-spacing:2px;
+    }
+    .comet {
+      offset-path: path('M -150 350 Q 600 100 1350 200');
+      offset-rotate: auto;
+      animation: moveComet 14s linear infinite;
+    }
+    .cometHead { fill:#ffffff; }
+    .cometTail {
+      fill:#b0d8ff;
+      opacity:0.6;
+    }
+  </style>
 
-    <!-- Comet trail gradient -->
-    <linearGradient id="cometTrail" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="25%" stop-color="#b0d8ff" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
+  <!-- Flat GitHub background -->
+  <rect width="1200" height="400" fill="#0e1116"/>
 
-    <!-- Soft glow filter -->
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <style>
-      @keyframes glowPulse {
-        0%,100% {opacity:1;filter:drop-shadow(0 0 6px #b0c8ff);}
-        50% {opacity:.6;filter:drop-shadow(0 0 15px #d8eaff);}
-      }
-      @keyframes rotateMoon {from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
-
-      /* Animate comet along an arched path */
-      @keyframes moveComet {
-        0%   {offset-distance:0%; opacity:0;}
-        10%  {opacity:1;}
-        50%  {opacity:1;}
-        80%  {opacity:.5;}
-        100% {offset-distance:100%; opacity:0;}
-      }
-
-      .sigil {
-        fill:none;
-        stroke:#c0d4ff;
-        stroke-width:2;
-        opacity:.8;
-        animation:glowPulse 4s infinite ease-in-out;
-      }
-      .planet {
-        transform-origin:600px 200px;
-        animation:rotateMoon 24s linear infinite;
-      }
-      .textMain {
-        fill:#e6ebff;
-        font-family:'Garamond','Times New Roman',serif;
-        font-size:72px;
-        text-anchor:middle;
-        letter-spacing:3px;
-        filter:url(#glow);
-      }
-      .textSub {
-        fill:#9aa7c9;
-        font-family:'Garamond','Times New Roman',serif;
-        font-size:28px;
-        text-anchor:middle;
-        letter-spacing:2px;
-      }
-
-      /* comet styling + motion */
-      .comet {
-        offset-path: path('M -150 350 Q 600 100 1350 200');
-        offset-rotate: auto;
-        animation: moveComet 14s linear infinite;
-      }
-      .cometHead {
-        fill: #ffffff;
-        filter: url(#glow);
-      }
-      .cometTail {
-        fill: url(#cometTrail);
-        filter: url(#glow);
-      }
-    </style>
-  </defs>
-
-  <rect width="1200" height="400" fill="url(#bg)"/>
-
-  <!-- Orbits & planets -->
+  <!-- Planets -->
   <g class="planet" style="animation-duration:26s;">
     <circle cx="600" cy="200" r="180" fill="none" stroke="#1d2036" stroke-width="1"/>
     <circle cx="600" cy="20" r="18" fill="#9ec8ff"/>
@@ -103,16 +71,14 @@
     <circle cx="600" cy="-30" r="20" fill="#ffd27f"/>
   </g>
 
-  <!-- Central sigil -->
+  <!-- Sigil -->
   <circle class="sigil" cx="600" cy="200" r="60"/>
   <path class="sigil" d="M600 140 L620 200 L600 260 L580 200 Z"/>
   <path class="sigil" d="M540 200 L660 200 M600 140 L600 260"/>
 
-  <!-- Comet (arched path) -->
+  <!-- Comet -->
   <g class="comet">
-    <!-- tail -->
     <rect class="cometTail" x="-100" y="-3" width="120" height="6" rx="3" ry="3"/>
-    <!-- head -->
     <circle class="cometHead" cx="25" cy="0" r="6"/>
   </g>
 
