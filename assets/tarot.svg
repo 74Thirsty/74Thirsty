@@ -1,0 +1,110 @@
+<svg width="1200" height="400" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0c0f1c"/>
+      <stop offset="100%" stop-color="#050608"/>
+    </radialGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes glowPulse {
+        0%,100% { opacity: 1; filter: drop-shadow(0 0 6px #b0c8ff); }
+        50% { opacity: 0.6; filter: drop-shadow(0 0 15px #d8eaff); }
+      }
+      @keyframes rotateMoon { from {transform: rotate(0deg);} to {transform: rotate(360deg);} }
+
+      @keyframes cometFly {
+        0% { transform: translate(-200px, 420px) rotate(-25deg); opacity: 0; }
+        10% { opacity: 1; }
+        50% { opacity: 1; }
+        80% { opacity: 0.6; }
+        100% { transform: translate(1300px, -50px) rotate(-25deg); opacity: 0; }
+      }
+
+      .sigil {
+        fill: none;
+        stroke: #c0d4ff;
+        stroke-width: 2;
+        opacity: 0.8;
+        animation: glowPulse 4s infinite ease-in-out;
+      }
+
+      .planet {
+        transform-origin: 600px 200px;
+        animation: rotateMoon 24s linear infinite;
+      }
+
+      .textMain {
+        fill: #e6ebff;
+        font-family: 'Garamond','Times New Roman',serif;
+        font-size: 72px;
+        text-anchor: middle;
+        letter-spacing: 3px;
+        filter: url(#glow);
+      }
+
+      .textSub {
+        fill: #9aa7c9;
+        font-family: 'Garamond','Times New Roman',serif;
+        font-size: 28px;
+        text-anchor: middle;
+        letter-spacing: 2px;
+      }
+
+      .comet {
+        fill: url(#cometGradient);
+        opacity: 0;
+        animation: cometFly 10s linear infinite;
+        animation-delay: 3s;
+      }
+    </style>
+
+    <linearGradient id="cometGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#b0d8ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="400" fill="url(#bg)"/>
+
+  <!-- Planets -->
+  <g class="planet" style="animation-duration:26s; animation-delay:0s">
+    <circle cx="600" cy="200" r="180" fill="none" stroke="#1d2036" stroke-width="1"/>
+    <circle cx="600" cy="20" r="18" fill="#9ec8ff"/>
+  </g>
+
+  <g class="planet" style="animation-duration:22s; animation-delay:-8s">
+    <circle cx="600" cy="200" r="130" fill="none" stroke="#1d2036" stroke-width="1"/>
+    <circle cx="600" cy="70" r="12" fill="#b3ffa6"/>
+  </g>
+
+  <g class="planet" style="animation-duration:18s; animation-delay:-16s">
+    <circle cx="600" cy="200" r="80" fill="none" stroke="#1d2036" stroke-width="1"/>
+    <circle cx="600" cy="120" r="9" fill="#ffb0e6"/>
+  </g>
+
+  <g class="planet" style="animation-duration:30s; animation-delay:-4s">
+    <circle cx="600" cy="200" r="230" fill="none" stroke="#1d2036" stroke-width="1"/>
+    <circle cx="600" cy="-30" r="20" fill="#ffd27f"/>
+  </g>
+
+  <!-- Central sigil -->
+  <circle class="sigil" cx="600" cy="200" r="60"/>
+  <path class="sigil" d="M600 140 L620 200 L600 260 L580 200 Z"/>
+  <path class="sigil" d="M540 200 L660 200 M600 140 L600 260"/>
+
+  <!-- Comet -->
+  <rect x="-200" y="420" width="200" height="4" class="comet"/>
+
+  <!-- Text -->
+  <text x="600" y="225" class="textMain">Tarot Teller</text>
+  <text x="600" y="275" class="textSub">Visions Beyond the Veil</text>
+</svg>
