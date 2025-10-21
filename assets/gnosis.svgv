@@ -1,0 +1,37 @@
+<svg width="100%" height="160" viewBox="0 0 800 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gnosis Safe x VANTAGE Banner">
+  <defs>
+    <linearGradient id="gnosisGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFF0"/>
+      <stop offset="50%" stop-color="#FF008C"/>
+      <stop offset="100%" stop-color="#4B9EFF"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="160" fill="#03040C"/>
+
+  <!-- Stylized Gnosis lock -->
+  <circle cx="100" cy="80" r="40" stroke="url(#gnosisGrad)" stroke-width="6" fill="none" filter="url(#neonGlow)"/>
+  <rect x="85" y="70" width="30" height="35" rx="5" fill="url(#gnosisGrad)" opacity="0.8" filter="url(#neonGlow)"/>
+  <circle cx="100" cy="85" r="6" fill="#03040C"/>
+
+  <!-- Text -->
+  <text x="170" y="95" fill="url(#gnosisGrad)" font-family="Orbitron, sans-serif"
+        font-size="44" font-weight="700" filter="url(#neonGlow)">
+    Gnosis Safe
+  </text>
+  <text x="460" y="95" fill="#888" font-family="Roboto Mono, monospace" font-size="20" opacity="0.8">
+    integrated within
+  </text>
+  <text x="640" y="95" fill="url(#gnosisGrad)" font-family="Orbitron, sans-serif"
+        font-size="40" font-weight="700" filter="url(#neonGlow)">
+    VANTAGE
+  </text>
+</svg>
