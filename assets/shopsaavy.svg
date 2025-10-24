@@ -1,0 +1,48 @@
+<svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Sparkle animation -->
+    <circle id="sparkle" r="1.5" fill="white">
+      <animate attributeName="r" values="1.5;3;1.5" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#0a0a0a"/>
+
+  <!-- Glowing particles -->
+  <g filter="url(#glow)">
+    <circle cx="100" cy="50" r="2" fill="#00f"/>
+    <circle cx="300" cy="150" r="2" fill="#00f"/>
+    <circle cx="500" cy="80" r="2" fill="#00f"/>
+  </g>
+
+  <!-- Sparkles -->
+  <use href="#sparkle" x="120" y="60"/>
+  <use href="#sparkle" x="320" y="160"/>
+  <use href="#sparkle" x="520" y="90"/>
+
+  <!-- Glowing shopping cart icon -->
+  <g transform="translate(450, 50)" filter="url(#glow)">
+    <rect x="0" y="0" width="40" height="30" rx="5" fill="#00f"/>
+    <circle cx="10" cy="35" r="5" fill="#00f"/>
+    <circle cx="30" cy="35" r="5" fill="#00f"/>
+  </g>
+
+  <!-- Text -->
+  <text x="50" y="100" font-family="Arial, sans-serif" font-size="32" fill="#00f" filter="url(#glow)">
+    ShopSavvy
+  </text>
+  <text x="50" y="140" font-family="Arial, sans-serif" font-size="18" fill="#aaa">
+    Empowering Your Shopping Experience
+  </text>
+</svg>
