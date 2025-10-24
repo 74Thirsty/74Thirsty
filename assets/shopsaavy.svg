@@ -1,10 +1,26 @@
 <svg width="100%" height="200" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <!-- Background color -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+
     <!-- Neon glow filter -->
     <filter id="neon" x="-50%" y="-50%" width="200%" height="200%">
       <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00f"/>
       <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#00f"/>
     </filter>
+
+    <!-- Gradient animation -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f">
+        <animate attributeName="stop-color" values="#00f;#0ff;#f0f;#00f" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#0ff">
+        <animate attributeName="stop-color" values="#0ff;#f0f;#00f;#0ff" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
 
     <!-- Sparkle animation -->
     <radialGradient id="sparkleGrad" cx="50%" cy="50%" r="50%">
@@ -16,40 +32,40 @@
       <animate attributeName="r" values="2;5;2" dur="1.5s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
     </circle>
-
-    <!-- Background gradient -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#000"/>
-      <stop offset="100%" stop-color="#111"/>
-    </linearGradient>
   </defs>
 
   <!-- Background -->
   <rect width="100%" height="100%" fill="url(#bgGrad)"/>
 
-  <!-- Floating sparkles -->
+  <!-- Starfield sparkles -->
   <g>
     <use href="#sparkle" x="100" y="40"/>
+    <use href="#sparkle" x="180" y="90"/>
     <use href="#sparkle" x="250" y="120"/>
+    <use href="#sparkle" x="320" y="60"/>
     <use href="#sparkle" x="400" y="80"/>
-    <use href="#sparkle" x="600" y="150"/>
-    <use href="#sparkle" x="750" y="60"/>
-    <use href="#sparkle" x="900" y="100"/>
-    <use href="#sparkle" x="1100" y="50"/>
+    <use href="#sparkle" x="480" y="140"/>
+    <use href="#sparkle" x="560" y="100"/>
+    <use href="#sparkle" x="640" y="150"/>
+    <use href="#sparkle" x="720" y="60"/>
+    <use href="#sparkle" x="800" y="90"/>
+    <use href="#sparkle" x="880" y="130"/>
+    <use href="#sparkle" x="960" y="70"/>
+    <use href="#sparkle" x="1040" y="100"/>
+    <use href="#sparkle" x="1120" y="50"/>
   </g>
 
   <!-- Glowing circular cart icon -->
   <g transform="translate(1050, 40)" filter="url(#neon)">
-    <circle cx="50" cy="50" r="40" fill="#00f" opacity="0.1"/>
-    <circle cx="50" cy="50" r="35" stroke="#00f" stroke-width="2" fill="none"/>
+    <circle cx="50" cy="50" r="40" fill="url(#textGrad)" opacity="0.1"/>
+    <circle cx="50" cy="50" r="35" stroke="url(#textGrad)" stroke-width="2" fill="none"/>
     <!-- Stylized cart icon -->
-    <path d="M35 40h30l-5 15H40l-5-15zm5 20a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm20 0a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" fill="#00f"/>
+    <path d="M35 40h30l-5 15H40l-5-15zm5 20a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm20 0a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" fill="url(#textGrad)"/>
   </g>
 
-  <!-- Glowing text -->
-  <text x="50" y="100" font-family="Montserrat, sans-serif" font-size="64" fill="#00f" filter="url(#neon)">
+  <!-- Glowing animated text -->
+  <text x="50" y="100" font-family="Montserrat, sans-serif" font-size="64" fill="url(#textGrad)" filter="url(#neon)">
     ShopSavvy
-    <animate attributeName="fill-opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite"/>
   </text>
   <text x="50" y="150" font-family="Montserrat, sans-serif" font-size="24" fill="#aaa">
     Empowering Your Shopping Experience
