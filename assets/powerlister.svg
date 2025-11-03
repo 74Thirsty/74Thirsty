@@ -1,0 +1,64 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e53238" />
+      <stop offset="50%" stop-color="#f5af02" />
+      <stop offset="100%" stop-color="#86b817" />
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .glow-text {
+        font-family: 'Arial Black', sans-serif;
+        font-size: 80px;
+        fill: url(#glowGradient);
+        text-transform: uppercase;
+        animation: glowPulse 3s ease-in-out infinite;
+        filter: url(#glow);
+      }
+
+      .bolt {
+        fill: #f5af02;
+        stroke: #e53238;
+        stroke-width: 8;
+        filter: url(#glow);
+        animation: boltPulse 2s ease-in-out infinite;
+        transform-origin: center;
+      }
+
+      @keyframes glowPulse {
+        0%, 100% {
+          filter: drop-shadow(0 0 6px #e53238);
+        }
+        50% {
+          filter: drop-shadow(0 0 20px #f5af02);
+        }
+      }
+
+      @keyframes boltPulse {
+        0%, 100% {
+          transform: scale(1) rotate(0deg);
+        }
+        50% {
+          transform: scale(1.1) rotate(-3deg);
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- GitHub Dark Background -->
+  <rect width="1200" height="300" fill="#0d1117"/>
+
+  <!-- Lightning Bolt -->
+  <polygon class="bolt" points="200,50 260,50 220,140 280,140 200,250 240,150 180,150" />
+
+  <!-- Text -->
+  <text x="320" y="180" class="glow-text">POWER LISTER</text>
+</svg>
