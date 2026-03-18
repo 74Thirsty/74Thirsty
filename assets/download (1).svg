@@ -1,0 +1,198 @@
+<svg width="100%" height="280" viewBox="0 0 1400 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FlexUV radiant shield neon banner">
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050816"></stop>
+      <stop offset="50%" stop-color="#0b1030"></stop>
+      <stop offset="100%" stop-color="#04050d"></stop>
+    </linearGradient>
+
+    <pattern id="microGrid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M 26 0 L 0 0 0 26" fill="none" stroke="#7f91ff" stroke-opacity="0.08" stroke-width="1"></path>
+    </pattern>
+
+    <!-- Chrome / neon -->
+    <linearGradient id="chrome" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7fbff"></stop>
+      <stop offset="18%" stop-color="#b9c7ff"></stop>
+      <stop offset="42%" stop-color="#6f82d9"></stop>
+      <stop offset="58%" stop-color="#edf3ff"></stop>
+      <stop offset="78%" stop-color="#7a87b8"></stop>
+      <stop offset="100%" stop-color="#dfe8ff"></stop>
+    </linearGradient>
+
+    <linearGradient id="uvGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#82d6ff">
+        <animate attributeName="stop-color" values="#82d6ff;#b54dff;#ff71d1;#82d6ff" dur="8s" repeatCount="indefinite"></animate>
+      </stop>
+      <stop offset="100%" stop-color="#ff71d1">
+        <animate attributeName="stop-color" values="#ff71d1;#82d6ff;#b54dff;#ff71d1" dur="8s" repeatCount="indefinite"></animate>
+      </stop>
+    </linearGradient>
+
+    <!-- Shield glows -->
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#b14dff" stop-opacity="0.48">
+        <animate attributeName="stop-opacity" values="0.28;0.56;0.28" dur="5s" repeatCount="indefinite"></animate>
+      </stop>
+      <stop offset="42%" stop-color="#6a5cff" stop-opacity="0.18"></stop>
+      <stop offset="100%" stop-color="#6a5cff" stop-opacity="0"></stop>
+    </radialGradient>
+
+    <radialGradient id="shieldInner" cx="50%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#f4fbff"></stop>
+      <stop offset="28%" stop-color="#b9d8ff"></stop>
+      <stop offset="55%" stop-color="#6f7fff"></stop>
+      <stop offset="82%" stop-color="#5b3cff"></stop>
+      <stop offset="100%" stop-color="#130b2d"></stop>
+    </radialGradient>
+
+    <radialGradient id="shieldHotspot" cx="50%" cy="28%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"></stop>
+      <stop offset="35%" stop-color="#9fe9ff" stop-opacity="0.42"></stop>
+      <stop offset="100%" stop-color="#9fe9ff" stop-opacity="0"></stop>
+    </radialGradient>
+
+    <linearGradient id="shieldEdge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eaf8ff"></stop>
+      <stop offset="40%" stop-color="#82d6ff"></stop>
+      <stop offset="75%" stop-color="#9b63ff"></stop>
+      <stop offset="100%" stop-color="#ffd8ff"></stop>
+    </linearGradient>
+
+    <linearGradient id="shieldStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f4fbff"></stop>
+      <stop offset="50%" stop-color="#8ddfff"></stop>
+      <stop offset="100%" stop-color="#ff71d1"></stop>
+    </linearGradient>
+
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#63d7ff" stop-opacity="0"></stop>
+      <stop offset="50%" stop-color="#63d7ff" stop-opacity="1"></stop>
+      <stop offset="100%" stop-color="#d95dff" stop-opacity="0"></stop>
+    </linearGradient>
+
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"></stop>
+      <stop offset="50%" stop-color="#9ee8ff" stop-opacity="0.22"></stop>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"></stop>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <filter id="hardGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="b"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <filter id="bigGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18" result="b1"></feGaussianBlur>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="b2"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b1"></feMergeNode>
+        <feMergeNode in="b2"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <!-- Shield shape -->
+    <path id="shieldShape" d="M700 58
+             L790 88
+             L790 144
+             Q790 196 700 226
+             Q610 196 610 144
+             L610 88
+             Z"></path>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="280" rx="22" fill="url(#bgGrad)"></rect>
+  <rect width="1400" height="280" rx="22" fill="url(#microGrid)"></rect>
+
+  <!-- Ambient center glow -->
+  <ellipse cx="700" cy="140" rx="390" ry="126" fill="url(#coreGlow)"></ellipse>
+
+  <!-- Outer frame -->
+  <rect x="16" y="16" width="1368" height="248" rx="18" fill="none" stroke="url(#chrome)" stroke-opacity="0.45" stroke-width="2"></rect>
+  <rect x="28" y="28" width="1344" height="224" rx="14" fill="none" stroke="#6fd9ff" stroke-opacity="0.18" stroke-width="1.2"></rect>
+
+  <!-- Side brackets -->
+  <path d="M72 72 L72 208 M72 72 L108 72 M72 208 L108 208" stroke="#6fd9ff" stroke-width="3" stroke-linecap="round" opacity="0.7" filter="url(#hardGlow)"></path>
+  <path d="M1328 72 L1328 208 M1328 72 L1292 72 M1328 208 L1292 208" stroke="#d95dff" stroke-width="3" stroke-linecap="round" opacity="0.7" filter="url(#hardGlow)"></path>
+
+  <!-- Top console strips -->
+  <g opacity="0.9">
+    <rect x="190" y="56" width="210" height="14" rx="7" fill="#79dcff" fill-opacity="0.12"></rect>
+    <rect x="1000" y="56" width="210" height="14" rx="7" fill="#ff71d1" fill-opacity="0.12"></rect>
+    <rect x="222" y="60" width="146" height="6" rx="3" fill="#79dcff" filter="url(#hardGlow)">
+      <animate attributeName="width" values="146;96;146" dur="4.4s" repeatCount="indefinite"></animate>
+    </rect>
+    <rect x="1032" y="60" width="146" height="6" rx="3" fill="#ff71d1" filter="url(#hardGlow)">
+      <animate attributeName="width" values="146;102;146" dur="3.8s" repeatCount="indefinite"></animate>
+    </rect>
+  </g>
+
+  <!-- Subtle horizontal energy rails -->
+  <path d="M170 212 Q700 152 1230 212" stroke="url(#accentLine)" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.75" filter="url(#softGlow)"></path>
+  <path d="M210 228 Q700 186 1190 228" stroke="url(#accentLine)" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.35" filter="url(#softGlow)"></path>
+
+  <!-- Shield glow layers -->
+  <use href="#shieldShape" fill="url(#uvGrad)" opacity="0.18" filter="url(#bigGlow)"></use>
+  <use href="#shieldShape" fill="url(#shieldInner)" filter="url(#softGlow)"></use>
+  <use href="#shieldShape" fill="url(#shieldHotspot)"></use>
+  <use href="#shieldShape" fill="none" stroke="url(#shieldStroke)" stroke-width="4" filter="url(#hardGlow)">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="3.6s" repeatCount="indefinite"></animate>
+  </use>
+
+  <!-- Inner shield facets -->
+  <path d="M700 72 L776 98 L776 142 Q776 185 700 211 Q624 185 624 142 L624 98 Z" fill="none" stroke="#d9f7ff" stroke-opacity="0.22" stroke-width="1.6"></path>
+  <path d="M700 72 L700 211" stroke="#d9f7ff" stroke-opacity="0.18" stroke-width="1.2"></path>
+  <path d="M624 98 Q700 126 776 98" fill="none" stroke="#86dbff" stroke-opacity="0.22" stroke-width="1.2"></path>
+  <path d="M640 160 Q700 184 760 160" fill="none" stroke="#ff82dd" stroke-opacity="0.16" stroke-width="1.2"></path>
+
+  <!-- Shield emblem -->
+  <g filter="url(#hardGlow)">
+    <path d="M672 108 L700 94 L728 108 L728 142 L700 158 L672 142 Z" fill="none" stroke="url(#chrome)" stroke-width="3"></path>
+    <path d="M686 118 L700 111 L714 118 L714 132 L700 139 L686 132 Z" fill="url(#uvGrad)" opacity="0.9"></path>
+  </g>
+
+  <!-- Scan line -->
+  <rect x="364" y="74" width="672" height="24" fill="url(#scanGrad)" opacity="0.30">
+    <animate attributeName="y" values="74;154;74" dur="6.5s" repeatCount="indefinite"></animate>
+  </rect>
+
+  <!-- Text -->
+  <text x="50%" y="48%" text-anchor="middle" font-size="78" font-family="Orbitron, 'Segoe UI', sans-serif" font-weight="800" letter-spacing="6" fill="url(#chrome)" filter="url(#softGlow)">
+    FLEX
+  </text>
+
+  <text x="50%" y="48%" dx="178" text-anchor="middle" font-size="78" font-family="Orbitron, 'Segoe UI', sans-serif" font-weight="800" letter-spacing="6" fill="url(#uvGrad)" filter="url(#softGlow)">
+    UV
+    <animate attributeName="opacity" values="0.82;1;0.82" dur="2.8s" repeatCount="indefinite"></animate>
+  </text>
+
+  <rect x="470" y="176" width="460" height="3.6" rx="1.8" fill="url(#uvGrad)" filter="url(#hardGlow)">
+    <animate attributeName="opacity" values="0.45;1;0.45" dur="3.2s" repeatCount="indefinite"></animate>
+  </rect>
+
+  <text x="50%" y="79%" text-anchor="middle" font-size="18" font-family="JetBrains Mono, 'Roboto Mono', monospace" letter-spacing="3.2" fill="#b7c8ff" opacity="0.92">
+    INTERACTIVE COMMAND CENTER FOR PYTHON ENVIRONMENTS
+  </text>
+
+  <!-- Tiny status glyphs -->
+  <g opacity="0.7" filter="url(#hardGlow)">
+    <circle cx="408" cy="88" r="4.2" fill="#79dcff"></circle>
+    <circle cx="426" cy="88" r="4.2" fill="#8e87ff"></circle>
+    <circle cx="444" cy="88" r="4.2" fill="#ff71d1"></circle>
+  </g>
+</svg>
