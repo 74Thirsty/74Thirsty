@@ -1,0 +1,143 @@
+<svg width="100%" height="320" viewBox="0 0 1400 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Destiny Calc dark occult banner">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05060d"></stop>
+      <stop offset="45%" stop-color="#0f1020"></stop>
+      <stop offset="100%" stop-color="#170d1f"></stop>
+    </linearGradient>
+
+    <radialGradient id="violetMist" cx="50%" cy="42%" r="58%">
+      <stop offset="0%" stop-color="#7a3cff" stop-opacity="0.24">
+        <animate attributeName="stop-opacity" values="0.12;0.3;0.12" dur="8s" repeatCount="indefinite"></animate>
+      </stop>
+      <stop offset="48%" stop-color="#4d2ca0" stop-opacity="0.12"></stop>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"></stop>
+    </radialGradient>
+
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff2bf" stop-opacity="0.95"></stop>
+      <stop offset="28%" stop-color="#ffd56a" stop-opacity="0.82"></stop>
+      <stop offset="62%" stop-color="#c58d21" stop-opacity="0.36"></stop>
+      <stop offset="100%" stop-color="#c58d21" stop-opacity="0"></stop>
+    </radialGradient>
+
+    <linearGradient id="goldStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff1bb"></stop>
+      <stop offset="40%" stop-color="#f2c55d"></stop>
+      <stop offset="75%" stop-color="#b57a19"></stop>
+      <stop offset="100%" stop-color="#ffe39e"></stop>
+    </linearGradient>
+
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f9edb4"></stop>
+      <stop offset="45%" stop-color="#ffd15a"></stop>
+      <stop offset="100%" stop-color="#e0a83b"></stop>
+    </linearGradient>
+
+    <linearGradient id="subGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a3b7ff"></stop>
+      <stop offset="100%" stop-color="#d9aaff"></stop>
+    </linearGradient>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <filter id="bigGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="16" result="b1"></feGaussianBlur>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b2"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b1"></feMergeNode>
+        <feMergeNode in="b2"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <pattern id="stars" width="42" height="42" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="8" r="0.8" fill="#d6dcff" opacity="0.18"></circle>
+      <circle cx="24" cy="18" r="1" fill="#ffefba" opacity="0.15"></circle>
+      <circle cx="35" cy="33" r="0.7" fill="#b6a8ff" opacity="0.16"></circle>
+    </pattern>
+  </defs>
+
+  <rect width="1400" height="320" rx="24" fill="url(#bg)"></rect>
+  <rect width="1400" height="320" rx="24" fill="url(#stars)"></rect>
+  <ellipse cx="700" cy="142" rx="460" ry="150" fill="url(#violetMist)"></ellipse>
+
+  <rect x="18" y="18" width="1364" height="284" rx="18" fill="none" stroke="#cda14c" stroke-opacity="0.35" stroke-width="1.5"></rect>
+  <rect x="30" y="30" width="1340" height="260" rx="14" fill="none" stroke="#8a82b8" stroke-opacity="0.14" stroke-width="1"></rect>
+
+  <!-- side sigils -->
+  <g opacity="0.72" filter="url(#softGlow)" stroke="#d9b35b" stroke-width="1.4" fill="none">
+    <circle cx="170" cy="160" r="52"></circle>
+    <circle cx="1230" cy="160" r="52"></circle>
+    <path d="M170 108 L170 212 M118 160 L222 160"></path>
+    <path d="M1230 108 L1230 212 M1178 160 L1282 160"></path>
+    <polygon points="170,122 201,178 139,178"></polygon>
+    <polygon points="1230,198 1261,142 1199,142"></polygon>
+  </g>
+
+  <!-- center seal -->
+  <g transform="translate(700 132)">
+    <circle r="102" fill="url(#goldGlow)" filter="url(#bigGlow)"></circle>
+    <circle r="92" fill="none" stroke="url(#goldStroke)" stroke-width="2.8"></circle>
+    <circle r="74" fill="none" stroke="#8e73e6" stroke-opacity="0.28" stroke-width="1.4"></circle>
+    <circle r="58" fill="none" stroke="#f8df98" stroke-opacity="0.36" stroke-width="1.2"></circle>
+
+    <!-- outer zodiac ring -->
+    <g fill="#f2cf78" opacity="0.88" font-family="Georgia, serif" font-size="16">
+      <text x="-8" y="-76">♈</text>
+      <text x="30" y="-66">♉</text>
+      <text x="58" y="-36">♊</text>
+      <text x="70" y="6">♋</text>
+      <text x="58" y="46">♌</text>
+      <text x="28" y="74">♍</text>
+      <text x="-8" y="86">♎</text>
+      <text x="-44" y="74">♏</text>
+      <text x="-72" y="46">♐</text>
+      <text x="-84" y="6">♑</text>
+      <text x="-72" y="-36">♒</text>
+      <text x="-42" y="-66">♓</text>
+    </g>
+
+    <!-- geometry -->
+    <polygon points="0,-42 36,20 -36,20" fill="none" stroke="#fff0bc" stroke-width="2.2" filter="url(#softGlow)"></polygon>
+    <polygon points="0,42 36,-20 -36,-20" fill="none" stroke="#9e8cff" stroke-opacity="0.5" stroke-width="1.6"></polygon>
+    <circle cx="0" cy="0" r="12" fill="#ffd86e" opacity="0.92"></circle>
+    <circle cx="0" cy="0" r="24" fill="none" stroke="#f7e3a3" stroke-opacity="0.48" stroke-width="1.4"></circle>
+
+    <circle r="108" fill="none" stroke="#f1c95c" stroke-opacity="0.16" stroke-width="3">
+      <animate attributeName="r" values="102;112;102" dur="5.5s" repeatCount="indefinite"></animate>
+      <animate attributeName="stroke-opacity" values="0.06;0.2;0.06" dur="5.5s" repeatCount="indefinite"></animate>
+    </circle>
+  </g>
+
+  <!-- subtle element runes -->
+  <g fill="#d6b15c" opacity="0.52" filter="url(#softGlow)" font-family="Georgia, serif" font-size="22">
+    <text x="276" y="92">木</text>
+    <text x="250" y="122">火</text>
+    <text x="238" y="154">土</text>
+    <text x="250" y="186">金</text>
+    <text x="276" y="216">水</text>
+
+    <text x="1098" y="92">水</text>
+    <text x="1124" y="122">金</text>
+    <text x="1136" y="154">土</text>
+    <text x="1124" y="186">火</text>
+    <text x="1098" y="216">木</text>
+  </g>
+
+  <!-- title -->
+  <text x="50%" y="80%" text-anchor="middle" fill="url(#titleGrad)" font-size="60" font-family="Cinzel, Georgia, serif" font-weight="700" letter-spacing="6" filter="url(#softGlow)">
+    DESTINY CALC
+    <animate attributeName="opacity" values="0.84;1;0.84" dur="4.5s" repeatCount="indefinite"></animate>
+  </text>
+
+  <text x="50%" y="90%" text-anchor="middle" fill="url(#subGrad)" font-size="16" font-family="Inter, 'Segoe UI', sans-serif" letter-spacing="3" opacity="0.92">
+    ZODIAC • CHINESE ELEMENTS • NUMEROLOGY • PERSONAL DESTINY ENGINE
+  </text>
+</svg>
