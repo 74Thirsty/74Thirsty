@@ -1,0 +1,178 @@
+<svg width="1400" height="320" viewBox="0 0 1400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="1400" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#050816">
+        <animate attributeName="stop-color" values="#050816;#0B1026;#050816" dur="8s" repeatCount="indefinite"></animate>
+      </stop>
+      <stop offset="50%" stop-color="#0A1B2A">
+        <animate attributeName="stop-color" values="#0A1B2A;#111B3A;#0A1B2A" dur="8s" repeatCount="indefinite"></animate>
+      </stop>
+      <stop offset="100%" stop-color="#04131F">
+        <animate attributeName="stop-color" values="#04131F;#071A2B;#04131F" dur="8s" repeatCount="indefinite"></animate>
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="neonLine" x1="0" y1="0" x2="1400" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00F0FF"></stop>
+      <stop offset="50%" stop-color="#7C4DFF"></stop>
+      <stop offset="100%" stop-color="#00FFA3"></stop>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-300 0;300 0;-300 0" dur="7s" repeatCount="indefinite"></animateTransform>
+    </linearGradient>
+
+    <radialGradient id="orb1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260 90) rotate(90) scale(140 220)">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.45"></stop>
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0"></stop>
+    </radialGradient>
+
+    <radialGradient id="orb2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1110 250) rotate(90) scale(170 260)">
+      <stop offset="0%" stop-color="#7C4DFF" stop-opacity="0.32"></stop>
+      <stop offset="100%" stop-color="#7C4DFF" stop-opacity="0"></stop>
+    </radialGradient>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14" result="blur"></feGaussianBlur>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 1 0"></feColorMatrix>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#5FE3FF" stroke-opacity="0.10" stroke-width="1"></path>
+    </pattern>
+
+    <pattern id="scanlines" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="3" fill="#FFFFFF" fill-opacity="0.03"></rect>
+    </pattern>
+
+    <clipPath id="bannerClip">
+      <rect x="14" y="14" width="1372" height="292" rx="22"></rect>
+    </clipPath>
+
+    <mask id="fadeMask">
+      <rect width="1400" height="320" fill="url(#bgGradient)"></rect>
+      <rect x="0" y="0" width="1400" height="320" fill="url(#scanlines)" opacity="0.8"></rect>
+    </mask>
+  </defs>
+
+  <!-- Outer frame -->
+  <rect x="8" y="8" width="1384" height="304" rx="26" fill="#020611"></rect>
+  <rect x="10" y="10" width="1380" height="300" rx="24" fill="url(#bgGradient)" stroke="url(#neonLine)" stroke-width="2.2"></rect>
+
+  <!-- Clipped content -->
+  <g clip-path="url(#bannerClip)">
+    <rect x="14" y="14" width="1372" height="292" fill="url(#bgGradient)"></rect>
+    <rect x="14" y="14" width="1372" height="292" fill="url(#grid)"></rect>
+    <rect x="14" y="14" width="1372" height="292" fill="url(#scanlines)"></rect>
+
+    <!-- Ambient glow orbs -->
+    <ellipse cx="260" cy="90" rx="220" ry="140" fill="url(#orb1)">
+      <animate attributeName="cx" values="240;310;240" dur="9s" repeatCount="indefinite"></animate>
+      <animate attributeName="cy" values="90;110;90" dur="7s" repeatCount="indefinite"></animate>
+    </ellipse>
+
+    <ellipse cx="1110" cy="250" rx="250" ry="170" fill="url(#orb2)">
+      <animate attributeName="cx" values="1110;1040;1110" dur="10s" repeatCount="indefinite"></animate>
+      <animate attributeName="cy" values="250;220;250" dur="8s" repeatCount="indefinite"></animate>
+    </ellipse>
+
+    <!-- Animated scanning beam -->
+    <rect x="-320" y="0" width="240" height="320" transform="rotate(8 0 0)" fill="url(#neonLine)" opacity="0.08" filter="url(#strongGlow)">
+      <animate attributeName="x" values="-320;1480" dur="6s" repeatCount="indefinite"></animate>
+    </rect>
+
+    <!-- Data streaks -->
+    <g opacity="0.55">
+      <line x1="70" y1="70" x2="420" y2="70" stroke="#00F0FF" stroke-width="2" stroke-linecap="round" filter="url(#softGlow)">
+        <animate attributeName="x1" values="70;110;70" dur="4s" repeatCount="indefinite"></animate>
+        <animate attributeName="x2" values="420;460;420" dur="4s" repeatCount="indefinite"></animate>
+      </line>
+      <line x1="1040" y1="85" x2="1280" y2="85" stroke="#00FFA3" stroke-width="2" stroke-linecap="round" filter="url(#softGlow)">
+        <animate attributeName="x1" values="1040;990;1040" dur="5s" repeatCount="indefinite"></animate>
+        <animate attributeName="x2" values="1280;1230;1280" dur="5s" repeatCount="indefinite"></animate>
+      </line>
+      <line x1="950" y1="245" x2="1310" y2="245" stroke="#7C4DFF" stroke-width="2" stroke-linecap="round" filter="url(#softGlow)">
+        <animate attributeName="x1" values="950;900;950" dur="6s" repeatCount="indefinite"></animate>
+        <animate attributeName="x2" values="1310;1260;1310" dur="6s" repeatCount="indefinite"></animate>
+      </line>
+    </g>
+
+    <!-- HUD corners -->
+    <g stroke="url(#neonLine)" stroke-width="3" stroke-linecap="round" opacity="0.9" filter="url(#softGlow)">
+      <path d="M46 46 H96 M46 46 V96"></path>
+      <path d="M1354 46 H1304 M1354 46 V96"></path>
+      <path d="M46 274 H96 M46 274 V224"></path>
+      <path d="M1354 274 H1304 M1354 274 V224"></path>
+    </g>
+
+    <!-- Left badge -->
+    <g transform="translate(72 95)">
+      <rect x="0" y="0" width="128" height="42" rx="10" fill="#071B2C" stroke="#00F0FF" stroke-opacity="0.6"></rect>
+      <text x="20" y="27" fill="#8FF7FF" font-family="monospace" font-size="20" font-weight="700">SCRIPT</text>
+      <circle cx="102" cy="21" r="5" fill="#00FFA3" filter="url(#softGlow)">
+        <animate attributeName="opacity" values="1;0.25;1" dur="1.5s" repeatCount="indefinite"></animate>
+      </circle>
+    </g>
+
+    <!-- Main title -->
+    <g transform="translate(70 170)">
+      <text x="0" y="0" font-family="Verdana, Geneva, sans-serif" font-size="54" font-weight="800" letter-spacing="2" fill="#D9F9FF" filter="url(#softGlow)">
+        PROXYCHAINS SETUP
+      </text>
+
+      <text x="2" y="42" font-family="monospace" font-size="20" letter-spacing="3" fill="#7CEBFF" opacity="0.95">
+        INTERACTIVE CONFIGURATION / INSTALL / DEPLOY
+      </text>
+
+      <!-- Cursor blink -->
+      <rect x="760" y="12" width="14" height="42" rx="2" fill="#00FFA3" filter="url(#softGlow)">
+        <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"></animate>
+      </rect>
+    </g>
+
+    <!-- Right side mini panel -->
+    <g transform="translate(1020 120)">
+      <rect x="0" y="0" width="280" height="110" rx="16" fill="#081120" stroke="#3BE7FF" stroke-opacity="0.35"></rect>
+      <text x="22" y="30" fill="#A7F6FF" font-family="monospace" font-size="16">STATUS: READY</text>
+      <text x="22" y="56" fill="#7CF4B5" font-family="monospace" font-size="14">MODE  :: INTERACTIVE</text>
+      <text x="22" y="80" fill="#C7A7FF" font-family="monospace" font-size="14">TARGET:: /etc/proxychains4.conf</text>
+
+      <rect x="22" y="90" width="236" height="6" rx="3" fill="#0F2C40"></rect>
+      <rect x="22" y="90" width="160" height="6" rx="3" fill="url(#neonLine)">
+        <animate attributeName="width" values="80;236;140;236;80" dur="5s" repeatCount="indefinite"></animate>
+      </rect>
+    </g>
+
+    <!-- Floating particles -->
+    <g>
+      <circle cx="240" cy="250" r="2.3" fill="#00F0FF">
+        <animate attributeName="cy" values="255;225;255" dur="4.8s" repeatCount="indefinite"></animate>
+        <animate attributeName="opacity" values="0.2;1;0.2" dur="4.8s" repeatCount="indefinite"></animate>
+      </circle>
+      <circle cx="350" cy="235" r="1.8" fill="#00FFA3">
+        <animate attributeName="cy" values="240;205;240" dur="5.2s" repeatCount="indefinite"></animate>
+        <animate attributeName="opacity" values="0.15;0.95;0.15" dur="5.2s" repeatCount="indefinite"></animate>
+      </circle>
+      <circle cx="1180" cy="65" r="2.2" fill="#7C4DFF">
+        <animate attributeName="cy" values="70;95;70" dur="4.2s" repeatCount="indefinite"></animate>
+        <animate attributeName="opacity" values="0.25;1;0.25" dur="4.2s" repeatCount="indefinite"></animate>
+      </circle>
+      <circle cx="1250" cy="215" r="1.7" fill="#00F0FF">
+        <animate attributeName="cy" values="220;185;220" dur="6s" repeatCount="indefinite"></animate>
+        <animate attributeName="opacity" values="0.2;0.85;0.2" dur="6s" repeatCount="indefinite"></animate>
+      </circle>
+    </g>
+  </g>
+</svg>
