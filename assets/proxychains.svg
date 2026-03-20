@@ -120,7 +120,7 @@
     <!-- Left badge -->
     <g transform="translate(72 95)">
       <rect x="0" y="0" width="128" height="42" rx="10" fill="#071B2C" stroke="#00F0FF" stroke-opacity="0.6"></rect>
-      <text x="20" y="27" fill="#8FF7FF" font-family="monospace" font-size="20" font-weight="700">SCRIPT</text>
+      <text x="20" y="27" fill="#8FF7FF" font-family="monospace" font-size="20" font-weight="700">Node JS</text>
       <circle cx="102" cy="21" r="5" fill="#00FFA3" filter="url(#softGlow)">
         <animate attributeName="opacity" values="1;0.25;1" dur="1.5s" repeatCount="indefinite"></animate>
       </circle>
@@ -129,11 +129,11 @@
     <!-- Main title -->
     <g transform="translate(70 170)">
       <text x="0" y="0" font-family="Verdana, Geneva, sans-serif" font-size="54" font-weight="800" letter-spacing="2" fill="#D9F9FF" filter="url(#softGlow)">
-        PROXYCHAINS SETUP
+        GNOMAN 2.0
       </text>
 
       <text x="2" y="42" font-family="monospace" font-size="20" letter-spacing="3" fill="#7CEBFF" opacity="0.95">
-        INTERACTIVE CONFIGURATION / INSTALL / DEPLOY
+        Gnosis Safe | Smart Contracts | Keyrings | Wallets
       </text>
 
       <!-- Cursor blink -->
@@ -145,9 +145,9 @@
     <!-- Right side mini panel -->
     <g transform="translate(1020 120)">
       <rect x="0" y="0" width="280" height="110" rx="16" fill="#081120" stroke="#3BE7FF" stroke-opacity="0.35"></rect>
-      <text x="22" y="30" fill="#A7F6FF" font-family="monospace" font-size="16">STATUS: READY</text>
+      <text x="22" y="30" fill="#A7F6FF" font-family="monospace" font-size="16">STATUS: Live</text>
       <text x="22" y="56" fill="#7CF4B5" font-family="monospace" font-size="14">MODE  :: INTERACTIVE</text>
-      <text x="22" y="80" fill="#C7A7FF" font-family="monospace" font-size="14">TARGET:: /etc/proxychains4.conf</text>
+      <text x="22" y="80" fill="#C7A7FF" font-family="monospace" font-size="14">TARGET:: ~/Downloads/</text>
 
       <rect x="22" y="90" width="236" height="6" rx="3" fill="#0F2C40"></rect>
       <rect x="22" y="90" width="160" height="6" rx="3" fill="url(#neonLine)">
