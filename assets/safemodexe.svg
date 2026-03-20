@@ -1,0 +1,118 @@
+<svg width="100%" height="100%" viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="laser" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff"></stop>
+      <stop offset="50%" stop-color="#4f8cff"></stop>
+      <stop offset="100%" stop-color="#8b5cf6"></stop>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <!-- perimeter -->
+    <path id="p" d="M40 40 
+         H1160 
+         Q1180 40 1180 60 
+         V200 
+         Q1180 220 1160 220 
+         H40 
+         Q20 220 20 200 
+         V60 
+         Q20 40 40 40 Z"></path>
+  </defs>
+
+  <!-- LASER SYSTEM (3 runners, offset) -->
+  <use href="#p" fill="none" stroke="url(#laser)" stroke-width="3" stroke-dasharray="120 900" filter="url(#glow)">
+    <animate attributeName="stroke-dashoffset" from="0" to="-1020" dur="0.75s" repeatCount="indefinite"></animate>
+  </use>
+
+  <use href="#p" fill="none" stroke="#00e5ff" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="60 900">
+    <animate attributeName="stroke-dashoffset" from="-320" to="-1340" dur="0.75s" repeatCount="indefinite"></animate>
+  </use>
+
+  <use href="#p" fill="none" stroke="#8b5cf6" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="80 900">
+    <animate attributeName="stroke-dashoffset" from="-600" to="-1620" dur="0.75s" repeatCount="indefinite"></animate>
+  </use>
+
+  <!-- ENERGY FLOW INSIDE PERIMETER -->
+  <use href="#p" fill="none" stroke="#00e5ff" stroke-opacity="0.1" stroke-width="1" stroke-dasharray="300 700">
+    <animate attributeName="stroke-dashoffset" from="0" to="-1000" dur="1.2s" repeatCount="indefinite"></animate>
+  </use>
+
+  <!-- CORNER BURST SPARKS -->
+  <g stroke="#ffffff" stroke-width="2" filter="url(#glow)">
+    <g transform="translate(40 40)">
+      <line x1="0" y1="0" x2="10" y2="-6">
+        <animate attributeName="x2" values="6;14;6" dur="0.4s" repeatCount="indefinite"></animate>
+      </line>
+      <line x1="0" y1="0" x2="-8" y2="10">
+        <animate attributeName="y2" values="6;14;6" dur="0.4s" begin="0.1s" repeatCount="indefinite"></animate>
+      </line>
+    </g>
+
+    <g transform="translate(1160 40)">
+      <line x1="0" y1="0" x2="-10" y2="-6">
+        <animate attributeName="x2" values="-6;-14;-6" dur="0.4s" begin="0.2s" repeatCount="indefinite"></animate>
+      </line>
+      <line x1="0" y1="0" x2="8" y2="10">
+        <animate attributeName="y2" values="6;14;6" dur="0.4s" begin="0.3s" repeatCount="indefinite"></animate>
+      </line>
+    </g>
+
+    <g transform="translate(1160 220)">
+      <line x1="0" y1="0" x2="-10" y2="6">
+        <animate attributeName="x2" values="-6;-14;-6" dur="0.4s" begin="0.4s" repeatCount="indefinite"></animate>
+      </line>
+      <line x1="0" y1="0" x2="8" y2="-10">
+        <animate attributeName="y2" values="-6;-14;-6" dur="0.4s" begin="0.5s" repeatCount="indefinite"></animate>
+      </line>
+    </g>
+
+    <g transform="translate(40 220)">
+      <line x1="0" y1="0" x2="10" y2="6">
+        <animate attributeName="x2" values="6;14;6" dur="0.4s" begin="0.6s" repeatCount="indefinite"></animate>
+      </line>
+      <line x1="0" y1="0" x2="-8" y2="-10">
+        <animate attributeName="y2" values="-6;-14;-6" dur="0.4s" begin="0.7s" repeatCount="indefinite"></animate>
+      </line>
+    </g>
+  </g>
+
+  <!-- TITLE -->
+  <text x="70" y="120" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" fill="#ffffff" filter="url(#glow)">
+    Gnosis Safe
+  </text>
+
+  <text x="70" y="165" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#8fdcff">
+    Integration
+  </text>
+
+  <!-- LOCK CORE -->
+  <g transform="translate(720 135)">
+    
+    <!-- SHACKLE (PADLOCK ARCH) -->
+    <path d="M -28 -28 
+             Q 0 -70 28 -28" fill="none" stroke="#00e5ff" stroke-width="4" filter="url(#glow)">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="1.2s" repeatCount="indefinite"></animate>
+    </path>
+
+    <!-- LOCK BODY -->
+    <rect x="-28" y="-10" width="56" height="48" rx="10" fill="none" stroke="#ffffff" stroke-width="2" filter="url(#glow)"></rect>
+
+    <!-- INNER CORE -->
+    <circle r="8" fill="#ffffff" filter="url(#glow)">
+      <animate attributeName="r" values="6;9;6" dur="1s" repeatCount="indefinite"></animate>
+    </circle>
+
+    <!-- ROTATING AUTH RING -->
+    <circle r="55" fill="none" stroke="#00e5ff" stroke-opacity="0.25" stroke-width="8">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"></animateTransform>
+    </circle>
+  </g>
+
+</svg>
