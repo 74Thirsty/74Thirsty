@@ -1,0 +1,210 @@
+<svg width="100%" height="100%" viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lineGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff"></stop>
+      <stop offset="50%" stop-color="#4f8cff"></stop>
+      <stop offset="100%" stop-color="#8b5cf6"></stop>
+    </linearGradient>
+
+    <linearGradient id="chipGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.20"></stop>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.20"></stop>
+    </linearGradient>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <filter id="tinyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.4" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <clipPath id="scanClip">
+      <rect x="24" y="24" width="1152" height="212" rx="28"></rect>
+    </clipPath>
+  </defs>
+
+  <!-- transparent background -->
+
+  <!-- outer skeleton -->
+  <rect x="24" y="24" width="1152" height="212" rx="28" fill="none" stroke="url(#lineGlow)" stroke-opacity="0.55" stroke-width="2"></rect>
+
+  <!-- segmented corner accents -->
+  <path d="M54 24 h60" stroke="#00e5ff" stroke-width="3" stroke-linecap="round" opacity="0.75"></path>
+  <path d="M24 54 v42" stroke="#00e5ff" stroke-width="3" stroke-linecap="round" opacity="0.75"></path>
+  <path d="M1086 24 h60" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round" opacity="0.75"></path>
+  <path d="M1176 54 v42" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round" opacity="0.75"></path>
+  <path d="M54 236 h60" stroke="#00e5ff" stroke-width="3" stroke-linecap="round" opacity="0.45"></path>
+  <path d="M24 194 v42" stroke="#00e5ff" stroke-width="3" stroke-linecap="round" opacity="0.45"></path>
+  <path d="M1086 236 h60" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round" opacity="0.45"></path>
+  <path d="M1176 194 v42" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round" opacity="0.45"></path>
+
+  <!-- diagonal scan beam -->
+  <g clip-path="url(#scanClip)" opacity="0.28">
+    <rect x="-180" y="0" width="220" height="320" fill="url(#chipGlow)" transform="rotate(18 0 0)">
+      <animate attributeName="x" from="-220" to="1360" dur="4.6s" repeatCount="indefinite"></animate>
+    </rect>
+  </g>
+
+  <!-- left label stack -->
+  <text x="74" y="88" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="2.6" fill="#87eaff" opacity="0.78">
+    SECURE MODULE
+  </text>
+
+  <text x="74" y="128" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" fill="#ffffff" filter="url(#softGlow)">
+    Gnosis Safe
+  </text>
+
+  <text x="74" y="164" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#8fdcff">
+    Integration
+  </text>
+
+  <text x="74" y="201" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#9fe8ff" opacity="0.92">
+    Multisig coordination • Threshold consensus • Execution authorization
+  </text>
+
+  <!-- status chips -->
+  <g transform="translate(72 214)">
+    <rect x="0" y="0" width="132" height="24" rx="12" fill="url(#chipGlow)" stroke="#00e5ff" stroke-opacity="0.35"></rect>
+    <circle cx="16" cy="12" r="4" fill="#00e5ff" filter="url(#tinyGlow)">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" repeatCount="indefinite"></animate>
+    </circle>
+    <text x="28" y="16" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#c9f7ff">Owners Verified</text>
+  </g>
+
+  <g transform="translate(214 214)">
+    <rect x="0" y="0" width="120" height="24" rx="12" fill="url(#chipGlow)" stroke="#4f8cff" stroke-opacity="0.35"></rect>
+    <circle cx="16" cy="12" r="4" fill="#4f8cff" filter="url(#tinyGlow)">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" begin="0.2s" repeatCount="indefinite"></animate>
+    </circle>
+    <text x="28" y="16" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#c9f7ff">Threshold 3/5</text>
+  </g>
+
+  <g transform="translate(344 214)">
+    <rect x="0" y="0" width="134" height="24" rx="12" fill="url(#chipGlow)" stroke="#8b5cf6" stroke-opacity="0.35"></rect>
+    <circle cx="16" cy="12" r="4" fill="#8b5cf6" filter="url(#tinyGlow)">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" begin="0.4s" repeatCount="indefinite"></animate>
+    </circle>
+    <text x="28" y="16" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#c9f7ff">Execution Ready</text>
+  </g>
+
+  <!-- central safe core -->
+  <g transform="translate(700 130)">
+    <!-- orbital ring -->
+    <circle cx="0" cy="0" r="62" fill="none" stroke="url(#lineGlow)" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="4 7">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="14s" repeatCount="indefinite"></animateTransform>
+    </circle>
+
+    <!-- inner pulse -->
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#00e5ff" stroke-opacity="0.28" stroke-width="10">
+      <animate attributeName="r" values="38;42;38" dur="2.2s" repeatCount="indefinite"></animate>
+      <animate attributeName="stroke-opacity" values="0.15;0.35;0.15" dur="2.2s" repeatCount="indefinite"></animate>
+    </circle>
+
+    <!-- safe body -->
+    <rect x="-26" y="-26" width="52" height="52" rx="12" fill="none" stroke="#d9fbff" stroke-width="2.5" filter="url(#softGlow)"></rect>
+    <rect x="-13" y="-13" width="26" height="26" rx="5" fill="none" stroke="#7fe7ff" stroke-width="2" opacity="0.9"></rect>
+    <circle cx="0" cy="0" r="4" fill="#ffffff" filter="url(#tinyGlow)"></circle>
+
+    <!-- rotating auth marker -->
+    <g>
+      <circle cx="0" cy="-62" r="4" fill="#8b5cf6" filter="url(#tinyGlow)"></circle>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="6s" repeatCount="indefinite"></animateTransform>
+    </g>
+  </g>
+
+  <!-- approval nodes -->
+  <g>
+    <circle cx="570" cy="72" r="11" fill="none" stroke="#00e5ff" stroke-width="2"></circle>
+    <circle cx="570" cy="72" r="3.5" fill="#00e5ff" filter="url(#tinyGlow)">
+      <animate attributeName="opacity" values="0.25;1;0.25" dur="1.4s" repeatCount="indefinite"></animate>
+    </circle>
+
+    <circle cx="828" cy="68" r="11" fill="none" stroke="#4f8cff" stroke-width="2"></circle>
+    <circle cx="828" cy="68" r="3.5" fill="#4f8cff" filter="url(#tinyGlow)">
+      <animate attributeName="opacity" values="0.25;1;0.25" dur="1.4s" begin="0.25s" repeatCount="indefinite"></animate>
+    </circle>
+
+    <circle cx="875" cy="132" r="11" fill="none" stroke="#8b5cf6" stroke-width="2"></circle>
+    <circle cx="875" cy="132" r="3.5" fill="#8b5cf6" filter="url(#tinyGlow)">
+      <animate attributeName="opacity" values="0.25;1;0.25" dur="1.4s" begin="0.5s" repeatCount="indefinite"></animate>
+    </circle>
+
+    <circle cx="827" cy="192" r="11" fill="none" stroke="#00e5ff" stroke-width="2"></circle>
+    <circle cx="827" cy="192" r="3.5" fill="#00e5ff" filter="url(#tinyGlow)">
+      <animate attributeName="opacity" values="0.25;1;0.25" dur="1.4s" begin="0.75s" repeatCount="indefinite"></animate>
+    </circle>
+
+    <circle cx="570" cy="188" r="11" fill="none" stroke="#4f8cff" stroke-width="2"></circle>
+    <circle cx="570" cy="188" r="3.5" fill="#4f8cff" filter="url(#tinyGlow)">
+      <animate attributeName="opacity" values="0.25;1;0.25" dur="1.4s" begin="1s" repeatCount="indefinite"></animate>
+    </circle>
+  </g>
+
+  <!-- connection routes -->
+  <g fill="none" stroke="url(#lineGlow)" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.55">
+    <path d="M570 72 C610 72, 622 96, 650 106"></path>
+    <path d="M828 68 C790 74, 774 90, 748 104"></path>
+    <path d="M875 132 C830 132, 800 132, 762 132"></path>
+    <path d="M827 192 C792 186, 770 172, 748 156"></path>
+    <path d="M570 188 C612 186, 624 166, 650 156"></path>
+  </g>
+
+  <!-- moving data packets -->
+  <g>
+    <circle r="3" fill="#ffffff" filter="url(#tinyGlow)">
+      <animateMotion dur="2.1s" repeatCount="indefinite" path="M570 72 C610 72, 622 96, 650 106"></animateMotion>
+    </circle>
+    <circle r="3" fill="#9beaff" filter="url(#tinyGlow)">
+      <animateMotion dur="1.9s" begin="0.35s" repeatCount="indefinite" path="M828 68 C790 74, 774 90, 748 104"></animateMotion>
+    </circle>
+    <circle r="3" fill="#ffffff" filter="url(#tinyGlow)">
+      <animateMotion dur="1.6s" begin="0.2s" repeatCount="indefinite" path="M875 132 C830 132, 800 132, 762 132"></animateMotion>
+    </circle>
+    <circle r="3" fill="#9beaff" filter="url(#tinyGlow)">
+      <animateMotion dur="2s" begin="0.5s" repeatCount="indefinite" path="M827 192 C792 186, 770 172, 748 156"></animateMotion>
+    </circle>
+    <circle r="3" fill="#ffffff" filter="url(#tinyGlow)">
+      <animateMotion dur="2.2s" begin="0.8s" repeatCount="indefinite" path="M570 188 C612 186, 624 166, 650 156"></animateMotion>
+    </circle>
+  </g>
+
+  <!-- right-side telemetry rail -->
+  <g transform="translate(964 52)">
+    <rect x="0" y="0" width="168" height="156" rx="16" fill="none" stroke="#7bdaff" stroke-opacity="0.24"></rect>
+    <text x="18" y="24" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1.4" fill="#97eaff" opacity="0.9">
+      AUTH STATUS
+    </text>
+
+    <text x="18" y="54" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#d7fbff">Queue</text>
+    <rect x="88" y="45" width="54" height="10" rx="5" fill="#11253a" opacity="0.45"></rect>
+    <rect x="88" y="45" width="39" height="10" rx="5" fill="#00e5ff" opacity="0.75">
+      <animate attributeName="width" values="24;39;29;39" dur="2.6s" repeatCount="indefinite"></animate>
+    </rect>
+
+    <text x="18" y="84" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#d7fbff">Consensus</text>
+    <rect x="88" y="75" width="54" height="10" rx="5" fill="#11253a" opacity="0.45"></rect>
+    <rect x="88" y="75" width="46" height="10" rx="5" fill="#4f8cff" opacity="0.78">
+      <animate attributeName="width" values="32;46;42;46" dur="2.2s" repeatCount="indefinite"></animate>
+    </rect>
+
+    <text x="18" y="114" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#d7fbff">Routing</text>
+    <rect x="88" y="105" width="54" height="10" rx="5" fill="#11253a" opacity="0.45"></rect>
+    <rect x="88" y="105" width="34" height="10" rx="5" fill="#8b5cf6" opacity="0.78">
+      <animate attributeName="width" values="18;34;27;34" dur="2.9s" repeatCount="indefinite"></animate>
+    </rect>
+
+    <text x="18" y="144" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#d7fbff">Ready</text>
+    <circle cx="100" cy="140" r="5" fill="#00ffb3" filter="url(#tinyGlow)">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="1.4s" repeatCount="indefinite"></animate>
+    </circle>
+  </g>
+</svg>
