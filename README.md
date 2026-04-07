@@ -39,7 +39,13 @@ focus:
 
 ---
 
-### ⚔️ My Main Project: Arbitrage Execution System (AES)
+### 📈 My Main Project:
+
+- VANTAGE (Vectorized Adaptive Nosebases Transactional Arbitrage Graph Engine)
+- HAVEN (Hirschauer's Adversarial Value Extraction Network)
+
+
+  Honestly Guys Ill Admit **Most** of the Info On Here Is Already Outdated. The  Project Has Become Much More Advanced And Its Just Me. Ill Update The Best I Can.
 
 > A modular arbitrage engine that auto-discovers, validates, and executes profitable cycles using on-chain liquidity, flash loans, and graph theory.
 
