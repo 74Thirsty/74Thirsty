@@ -1,0 +1,240 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#050816"/>
+      <stop offset="0.45" stop-color="#0A1025"/>
+      <stop offset="1" stop-color="#03050D"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(360 220) rotate(20) scale(560 300)">
+      <stop stop-color="#18E0FF" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#18E0FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1240 260) rotate(-12) scale(540 280)">
+      <stop stop-color="#7C4DFF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#7C4DFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowC" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(820 720) rotate(0) scale(720 260)">
+      <stop stop-color="#00FFA3" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#00FFA3" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="nodeGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0.4  0 0 1 0 0.8  0 0 0 0.9 0" result="tint"/>
+      <feMerge>
+        <feMergeNode in="tint"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <linearGradient id="cardStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#32F0FF" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#7B61FF" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#00FFA3" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="linkGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#18E0FF"/>
+      <stop offset="0.5" stop-color="#7C4DFF"/>
+      <stop offset="1" stop-color="#00FFA3"/>
+    </linearGradient>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" stroke="#B5C6FF" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+
+    <mask id="fadeBottom">
+      <rect x="0" y="0" width="1600" height="900" fill="white"/>
+      <rect x="0" y="740" width="1600" height="160" fill="url(#bottomFade)"/>
+    </mask>
+    <linearGradient id="bottomFade" x1="0" y1="740" x2="0" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="black" stop-opacity="0"/>
+      <stop offset="1" stop-color="black" stop-opacity="1"/>
+    </linearGradient>
+
+    <g id="tinyDot">
+      <circle r="2.2" fill="#B7D9FF"/>
+    </g>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bgGrad)"/>
+  <rect width="1600" height="900" fill="url(#grid)" opacity="0.8"/>
+  <rect width="1600" height="900" fill="url(#glowA)"/>
+  <rect width="1600" height="900" fill="url(#glowB)"/>
+  <rect width="1600" height="900" fill="url(#glowC)"/>
+
+  <!-- drifting particles -->
+  <g opacity="0.75">
+    <use href="#tinyDot" x="120" y="140">
+      <animate attributeName="y" values="140;120;140" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="120;138;120" dur="10s" repeatCount="indefinite"/>
+    </use>
+    <use href="#tinyDot" x="240" y="620">
+      <animate attributeName="y" values="620;590;620" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="x" values="240;260;240" dur="11s" repeatCount="indefinite"/>
+    </use>
+    <use href="#tinyDot" x="410" y="300">
+      <animate attributeName="y" values="300;330;300" dur="7s" repeatCount="indefinite"/>
+    </use>
+    <use href="#tinyDot" x="610" y="760">
+      <animate attributeName="y" values="760;730;760" dur="12s" repeatCount="indefinite"/>
+    </use>
+    <use href="#tinyDot" x="790" y="94">
+      <animate attributeName="x" values="790;825;790" dur="13s" repeatCount="indefinite"/>
+    </use>
+    <use href="#tinyDot" x="980" y="210">
+      <animate attributeName="y" values="210;188;210" dur="8.8s" repeatCount="indefinite"/>
+    </use>
+    <use href="#tinyDot" x="1210" y="665">
+      <animate attributeName="x" values="1210;1180;1210" dur="10.5s" repeatCount="indefinite"/>
+    </use>
+    <use href="#tinyDot" x="1465" y="178">
+      <animate attributeName="y" values="178;200;178" dur="8.2s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- Title -->
+  <g transform="translate(80 60)">
+    <text x="0" y="0" fill="#EAF2FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="54" font-weight="800" letter-spacing="1.2">MEV Dual-Engine Architecture</text>
+    <text x="0" y="42" fill="#8AA6D8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="500">State transitions • control surfaces • optimization • worst-case filtered execution</text>
+    <rect x="0" y="62" width="840" height="2" rx="1" fill="url(#linkGrad)" opacity="0.75">
+      <animate attributeName="width" values="560;840;620;840;560" dur="14s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Animated links -->
+  <g stroke="url(#linkGrad)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.45" filter="url(#softGlow)">
+    <path id="linkStateLeft" d="M 330 250 C 430 250, 480 260, 560 300"/>
+    <path id="linkStateRight" d="M 1270 250 C 1170 250, 1110 260, 1040 300"/>
+    <path id="linkSimLeft" d="M 650 390 C 650 450, 650 480, 650 540"/>
+    <path id="linkSimRight" d="M 950 390 C 950 450, 950 480, 950 540"/>
+    <path id="linkCenter" d="M 770 610 C 810 650, 790 690, 800 730"/>
+    <path id="linkLeftBridge" d="M 740 340 C 785 330, 815 330, 860 340"/>
+    <path id="linkBottomBus" d="M 160 790 C 520 830, 1080 830, 1440 790" opacity="0.22"/>
+  </g>
+
+  <!-- pulses -->
+  <g filter="url(#softGlow)">
+    <circle r="6" fill="#18E0FF">
+      <animateMotion dur="4.8s" repeatCount="indefinite" path="M 330 250 C 430 250, 480 260, 560 300"/>
+    </circle>
+    <circle r="6" fill="#7C4DFF">
+      <animateMotion dur="5.2s" repeatCount="indefinite" path="M 1270 250 C 1170 250, 1110 260, 1040 300"/>
+    </circle>
+    <circle r="6" fill="#00FFA3">
+      <animateMotion dur="3.8s" repeatCount="indefinite" path="M 650 390 C 650 450, 650 480, 650 540"/>
+    </circle>
+    <circle r="6" fill="#18E0FF">
+      <animateMotion dur="4.1s" repeatCount="indefinite" path="M 950 390 C 950 450, 950 480, 950 540"/>
+    </circle>
+    <circle r="7" fill="#7C4DFF">
+      <animateMotion dur="3.9s" repeatCount="indefinite" path="M 770 610 C 810 650, 790 690, 800 730"/>
+    </circle>
+    <circle r="5" fill="#B9F7FF" opacity="0.7">
+      <animateMotion dur="12s" repeatCount="indefinite" path="M 160 790 C 520 830, 1080 830, 1440 790"/>
+    </circle>
+  </g>
+
+  <!-- Left top card -->
+  <g transform="translate(90 150)" filter="url(#nodeGlow)">
+    <rect width="360" height="200" rx="26" fill="#0B1226" fill-opacity="0.9" stroke="url(#cardStroke)" stroke-width="2.5"/>
+    <rect x="14" y="14" width="332" height="172" rx="18" fill="#101A33" fill-opacity="0.72" stroke="#8BCBFF" stroke-opacity="0.14"/>
+    <text x="28" y="48" fill="#EAF4FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="28" font-weight="800">State Ingestion</text>
+    <text x="28" y="82" fill="#86DFFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">Block-synchronous protocol state</text>
+    <text x="28" y="115" fill="#BFD0F2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">AMM reserves · CL ticks · utilization</text>
+    <text x="28" y="141" fill="#BFD0F2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">borrow caps · oracle rules · borrower sets</text>
+    <text x="28" y="167" fill="#BFD0F2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">gas / tip model · flash venues · pause flags</text>
+    <circle cx="320" cy="42" r="8" fill="#18E0FF">
+      <animate attributeName="r" values="8;11;8" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.45;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Right top card -->
+  <g transform="translate(1150 150)" filter="url(#nodeGlow)">
+    <rect width="360" height="200" rx="26" fill="#0B1226" fill-opacity="0.9" stroke="url(#cardStroke)" stroke-width="2.5"/>
+    <rect x="14" y="14" width="332" height="172" rx="18" fill="#101A33" fill-opacity="0.72" stroke="#C8A9FF" stroke-opacity="0.16"/>
+    <text x="28" y="48" fill="#EAF4FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="28" font-weight="800">Robustness Filter</text>
+    <text x="28" y="82" fill="#B698FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">Worst-case positive only</text>
+    <text x="28" y="115" fill="#BFD0F2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">pending writes · reserve shocks · oracle drift</text>
+    <text x="28" y="141" fill="#BFD0F2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">CVaR gate · safety margin · fill realism</text>
+    <text x="28" y="167" fill="#BFD0F2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">private execution paths only</text>
+    <circle cx="320" cy="42" r="8" fill="#7C4DFF">
+      <animate attributeName="r" values="8;11;8" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.4;1" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Center card -->
+  <g transform="translate(530 260)" filter="url(#nodeGlow)">
+    <rect width="540" height="160" rx="30" fill="#091223" fill-opacity="0.94" stroke="url(#cardStroke)" stroke-width="3"/>
+    <rect x="16" y="16" width="508" height="128" rx="22" fill="#12203C" fill-opacity="0.74"/>
+    <text x="42" y="58" fill="#F5FAFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="850">Exact Transition Library</text>
+    <text x="42" y="94" fill="#8FFFD4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700">swap() · repay() · withdraw() · supply() · borrow() · liquidate()</text>
+    <text x="42" y="124" fill="#BFD0F2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16">Every protocol modeled as an exact state-transition operator — no heuristics.</text>
+  </g>
+
+  <!-- Engine left -->
+  <g transform="translate(210 540)" filter="url(#nodeGlow)">
+    <rect width="520" height="200" rx="28" fill="#091629" fill-opacity="0.94" stroke="url(#cardStroke)" stroke-width="2.6"/>
+    <rect x="16" y="16" width="488" height="168" rx="20" fill="#0E1E37" fill-opacity="0.74"/>
+    <text x="34" y="54" fill="#F6FCFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="30" font-weight="850">Refi / Debt Margin Arb</text>
+    <text x="34" y="86" fill="#86DFFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">Move balance sheet across venues</text>
+    <text x="34" y="118" fill="#C6D5F2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">flash borrow → repay A → unlock collateral → supply B → borrow B</text>
+    <text x="34" y="144" fill="#C6D5F2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">typed route templates · endogenous borrow state · carry haircut</text>
+    <text x="34" y="170" fill="#9CFFC8" font-family="JetBrains Mono,Consolas,monospace" font-size="15">maximize Πᵣ(x,u)</text>
+    <g opacity="0.9">
+      <rect x="362" y="36" width="112" height="42" rx="14" fill="#102B48" stroke="#18E0FF" stroke-opacity="0.45"/>
+      <text x="390" y="63" fill="#CCF8FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700">Route</text>
+      <rect x="362" y="92" width="112" height="42" rx="14" fill="#142743" stroke="#00FFA3" stroke-opacity="0.45"/>
+      <text x="383" y="119" fill="#D7FFE6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700">Sizing</text>
+    </g>
+  </g>
+
+  <!-- Engine right -->
+  <g transform="translate(870 540)" filter="url(#nodeGlow)">
+    <rect width="520" height="200" rx="28" fill="#0A152A" fill-opacity="0.94" stroke="url(#cardStroke)" stroke-width="2.6"/>
+    <rect x="16" y="16" width="488" height="168" rx="20" fill="#111E38" fill-opacity="0.74"/>
+    <text x="34" y="54" fill="#F6FCFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="30" font-weight="850">Deterministic Forcing</text>
+    <text x="34" y="86" fill="#B99BFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">Push market state → debt regime change</text>
+    <text x="34" y="118" fill="#C6D5F2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">control AMM / oracle path → trigger liquidation / kink / threshold</text>
+    <text x="34" y="144" fill="#C6D5F2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">event-aware solve · exact unwind value · exploit + unwind bundle</text>
+    <text x="34" y="170" fill="#9CFFC8" font-family="JetBrains Mono,Consolas,monospace" font-size="15">maximize Π(q,δ)</text>
+    <g opacity="0.9">
+      <rect x="364" y="36" width="112" height="42" rx="14" fill="#1B1741" stroke="#7C4DFF" stroke-opacity="0.55"/>
+      <text x="392" y="63" fill="#EFE6FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700">Control</text>
+      <rect x="364" y="92" width="112" height="42" rx="14" fill="#132B34" stroke="#00FFA3" stroke-opacity="0.45"/>
+      <text x="392" y="119" fill="#D7FFE6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700">Exploit</text>
+    </g>
+  </g>
+
+  <!-- Bottom strip -->
+  <g transform="translate(120 770)">
+    <rect width="1360" height="86" rx="24" fill="#09111F" fill-opacity="0.92" stroke="#9EB7FF" stroke-opacity="0.15"/>
+    <text x="34" y="34" fill="#8BD8FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="800">Pipeline</text>
+    <text x="34" y="60" fill="#D4E2FF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16">State update → prescan → candidate generation → exact simulation → optimization → robustness → bundle build → private submission</text>
+    <text x="1080" y="52" fill="#91FFCD" font-family="JetBrains Mono,Consolas,monospace" font-size="16">Π_min &gt; 0   •   CVaRα &gt; 0</text>
+  </g>
+
+  <!-- subtle scanning beam -->
+  <g opacity="0.32" mask="url(#fadeBottom)">
+    <rect x="-300" y="0" width="220" height="900" transform="rotate(12 0 0)" fill="url(#beamGrad)">
+      <animate attributeName="x" values="-420;1700" dur="8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <defs>
+    <linearGradient id="beamGrad" x1="0" y1="0" x2="220" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#72F3FF" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
