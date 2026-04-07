@@ -47,6 +47,8 @@ focus:
 
   Honestly Guys Ill Admit **Most** of the Info On Here Is Already Outdated. The  Project Has Become Much More Advanced And Its Just Me. Ill Update The Best I Can.
 
+[74Thirsty/vantage-info](https://github.com/74Thirsty/vantage-info)
+
 > A modular arbitrage engine that auto-discovers, validates, and executes profitable cycles using on-chain liquidity, flash loans, and graph theory.
 
 🔹 Plugin architecture for DeFi protocols
