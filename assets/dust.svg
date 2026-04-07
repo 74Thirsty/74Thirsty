@@ -1,0 +1,228 @@
+
+<svg width="1600" height="420" viewBox="0 0 1600 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1600" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#060816"/>
+      <stop offset="45%" stop-color="#0d1024"/>
+      <stop offset="100%" stop-color="#05070f"/>
+      <animate attributeName="x2" values="1600;1200;1600" dur="12s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="titleGrad" x1="280" y1="110" x2="1350" y2="310" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9eff00"/>
+      <stop offset="45%" stop-color="#37ffd7"/>
+      <stop offset="100%" stop-color="#8b5cff"/>
+      <animate attributeName="x1" values="280;340;280" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1350;1250;1350" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="90" y1="330" x2="610" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="100%" stop-color="#9eff00"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0.9
+                0 0 1 0 0.35
+                0 0 0 1 0"/>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+
+    <filter id="bigGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="24" result="blur"/>
+      <feBlend in="SourceGraphic" in2="blur" mode="screen"/>
+    </filter>
+
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" stroke="#7b8cff" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+
+    <clipPath id="scanClip">
+      <rect x="0" y="0" width="1600" height="420" rx="26"/>
+    </clipPath>
+
+    <mask id="noiseMask">
+      <rect width="1600" height="420" fill="black"/>
+      <g fill="white">
+        <rect x="70" y="44" width="2" height="2"><animate attributeName="opacity" values="0;.7;0" dur="2.7s" repeatCount="indefinite"/></rect>
+        <rect x="220" y="116" width="2" height="2"><animate attributeName="opacity" values="0;.6;0" dur="3.3s" repeatCount="indefinite"/></rect>
+        <rect x="490" y="84" width="2" height="2"><animate attributeName="opacity" values="0;.8;0" dur="2.9s" repeatCount="indefinite"/></rect>
+        <rect x="780" y="210" width="2" height="2"><animate attributeName="opacity" values="0;.5;0" dur="3.1s" repeatCount="indefinite"/></rect>
+        <rect x="1010" y="70" width="2" height="2"><animate attributeName="opacity" values="0;.9;0" dur="2.5s" repeatCount="indefinite"/></rect>
+        <rect x="1290" y="180" width="2" height="2"><animate attributeName="opacity" values="0;.5;0" dur="3.7s" repeatCount="indefinite"/></rect>
+        <rect x="1480" y="54" width="2" height="2"><animate attributeName="opacity" values="0;.8;0" dur="2.8s" repeatCount="indefinite"/></rect>
+      </g>
+    </mask>
+
+    <style>
+      .mono { font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+      .title {
+        font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        font-weight: 900;
+        letter-spacing: 7px;
+      }
+      .sub {
+        font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        font-weight: 700;
+        letter-spacing: 3px;
+      }
+      .tiny {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        letter-spacing: 2.4px;
+      }
+    </style>
+  </defs>
+
+  <rect width="1600" height="420" rx="26" fill="url(#bgGrad)"/>
+  <rect width="1600" height="420" rx="26" fill="url(#grid)" opacity="0.55"/>
+  <rect x="1.5" y="1.5" width="1597" height="417" rx="24.5" stroke="url(#titleGrad)" stroke-opacity="0.28" stroke-width="3"/>
+
+  <!-- Background glows -->
+  <ellipse cx="1320" cy="88" rx="240" ry="90" fill="#8b5cff" opacity="0.18" filter="url(#bigGlow)">
+    <animate attributeName="cx" values="1290;1340;1290" dur="9s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="280" cy="344" rx="220" ry="72" fill="#00f5ff" opacity="0.14" filter="url(#bigGlow)">
+    <animate attributeName="cx" values="260;320;260" dur="10s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Scanner -->
+  <g clip-path="url(#scanClip)">
+    <rect x="-320" y="0" width="320" height="420" fill="url(#accentGrad)" opacity="0.09" transform="skewX(-18)">
+      <animate attributeName="x" values="-360;1700" dur="5.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Left mark -->
+  <g transform="translate(84 104)">
+    <g filter="url(#softGlow)">
+      <path d="M132 0L215 47V141L132 188L49 141V47L132 0Z" fill="none" stroke="url(#accentGrad)" stroke-width="4"/>
+      <path d="M132 24L194 59V129L132 164L70 129V59L132 24Z" fill="none" stroke="#90F900" stroke-opacity="0.9" stroke-width="2.5"/>
+      <path d="M132 52L165 71V108L132 127L99 108V71L132 52Z" fill="#0a1422" stroke="#37ffd7" stroke-width="2"/>
+      <path d="M132 62V116" stroke="#9eff00" stroke-width="4" stroke-linecap="round"/>
+      <path d="M110 89H154" stroke="#9eff00" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <circle cx="132" cy="94" r="90" stroke="#37ffd7" stroke-opacity="0.16" stroke-width="1.5" stroke-dasharray="5 10">
+      <animateTransform attributeName="transform" type="rotate" from="0 132 94" to="360 132 94" dur="24s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="132" cy="94" r="112" stroke="#8b5cff" stroke-opacity="0.14" stroke-width="1.2" stroke-dasharray="2 12">
+      <animateTransform attributeName="transform" type="rotate" from="360 132 94" to="0 132 94" dur="18s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- orbit particles -->
+    <g>
+      <circle cx="132" cy="4" r="4" fill="#9eff00">
+        <animateMotion dur="8s" repeatCount="indefinite" path="M132 4 A90 90 0 1 1 131.9 4"/>
+      </circle>
+      <circle cx="244" cy="94" r="3.5" fill="#00f5ff">
+        <animateMotion dur="6s" repeatCount="indefinite" path="M244 94 A112 112 0 1 0 243.9 94"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Main title -->
+  <g transform="translate(320 114)">
+    <text class="title" x="0" y="104" font-size="100" fill="url(#titleGrad)" filter="url(#softGlow)">ETH DUST</text>
+    <text class="title" x="0" y="214" font-size="100" fill="url(#titleGrad)" filter="url(#softGlow)">LOG</text>
+
+    <!-- Glitch shadows -->
+    <text class="title" x="4" y="104" font-size="100" fill="#00f5ff" opacity="0.18">ETH DUST</text>
+    <text class="title" x="-3" y="214" font-size="100" fill="#9eff00" opacity="0.14">LOG</text>
+
+    <g opacity="0.24">
+      <rect x="2" y="57" width="604" height="5" fill="#00f5ff">
+        <animate attributeName="width" values="80;580;140;604;90" dur="4.5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="8" y="165" width="312" height="4" fill="#9eff00">
+        <animate attributeName="x" values="8;30;8" dur="2.8s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <text class="sub" x="2" y="266" font-size="28" fill="#C8D2FF" opacity="0.92">
+      on-chain residue • fragments • execution traces
+    </text>
+
+    <text class="tiny" x="4" y="310" font-size="17" fill="#7FE8FF" opacity="0.78">
+      mempool // mev // forensic flow // packetized edge
+    </text>
+  </g>
+
+  <!-- Right-side HUD -->
+  <g transform="translate(1186 74)">
+    <rect x="0" y="0" width="328" height="266" rx="18" fill="#0b1121" fill-opacity="0.58" stroke="#6be7ff" stroke-opacity="0.25"/>
+    <g opacity="0.9">
+      <text class="tiny" x="24" y="34" font-size="16" fill="#9eff00">LIVE SIGNAL</text>
+      <rect x="24" y="50" width="280" height="1" fill="#7aa2ff" opacity="0.28"/>
+      <text class="tiny" x="24" y="84" font-size="14" fill="#c8d2ff">dust index</text>
+      <rect x="24" y="96" width="218" height="10" rx="5" fill="#18233d"/>
+      <rect x="24" y="96" width="170" height="10" rx="5" fill="url(#titleGrad)">
+        <animate attributeName="width" values="90;185;154;210;170" dur="6s" repeatCount="indefinite"/>
+      </rect>
+
+      <text class="tiny" x="24" y="138" font-size="14" fill="#c8d2ff">EIP-712</text>
+      <path d="M24 178 C58 170, 64 106, 110 118 S160 208, 190 186 S232 132, 274 148 S300 172, 304 128"
+            fill="none" stroke="#37ffd7" stroke-width="3" stroke-linecap="round"/>
+      <circle r="5" fill="#9eff00">
+        <animateMotion dur="4.2s" repeatCount="indefinite"
+          path="M24 178 C58 170, 64 106, 110 118 S160 208, 190 186 S232 132, 274 148 S300 172, 304 128"/>
+      </circle>
+
+      <text class="tiny" x="24" y="220" font-size="14" fill="#c8d2ff">tx residue</text>
+      <g transform="translate(24 232)">
+        <rect x="0" y="0" width="16" height="14" rx="2" fill="#203152"/>
+        <rect x="24" y="-8" width="16" height="22" rx="2" fill="#203152"/>
+        <rect x="48" y="-2" width="16" height="16" rx="2" fill="#203152"/>
+        <rect x="72" y="-14" width="16" height="28" rx="2" fill="#203152"/>
+        <rect x="96" y="-4" width="16" height="18" rx="2" fill="#203152"/>
+        <rect x="120" y="-10" width="16" height="24" rx="2" fill="#203152"/>
+        <rect x="144" y="-1" width="16" height="15" rx="2" fill="#203152"/>
+        <rect x="168" y="-7" width="16" height="21" rx="2" fill="#203152"/>
+        <rect x="192" y="-11" width="16" height="25" rx="2" fill="#203152"/>
+        <rect x="216" y="-5" width="16" height="19" rx="2" fill="#203152"/>
+
+        <rect x="0" y="0" width="16" height="14" rx="2" fill="#8b5cff" opacity="0.8">
+          <animate attributeName="height" values="8;14;5;12;14" dur="4.1s" repeatCount="indefinite"/>
+          <animate attributeName="y" values="6;0;9;2;0" dur="4.1s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="24" y="-8" width="16" height="22" rx="2" fill="#37ffd7" opacity="0.85">
+          <animate attributeName="height" values="12;22;8;18;22" dur="5.2s" repeatCount="indefinite"/>
+          <animate attributeName="y" values="2;-8;6;-4;-8" dur="5.2s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="48" y="-2" width="16" height="16" rx="2" fill="#9eff00" opacity="0.8">
+          <animate attributeName="height" values="5;16;7;13;16" dur="4.8s" repeatCount="indefinite"/>
+          <animate attributeName="y" values="9;-2;7;1;-2" dur="4.8s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="72" y="-14" width="16" height="28" rx="2" fill="#00f5ff" opacity="0.75">
+          <animate attributeName="height" values="10;28;14;22;28" dur="6.1s" repeatCount="indefinite"/>
+          <animate attributeName="y" values="4;-14;0;-8;-14" dur="6.1s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
+  </g>
+
+  <!-- Top corner markers -->
+  <g opacity="0.8">
+    <path d="M42 42H114" stroke="#9eff00" stroke-width="3" stroke-linecap="round"/>
+    <path d="M42 42V114" stroke="#9eff00" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1558 42H1486" stroke="#37ffd7" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1558 42V114" stroke="#37ffd7" stroke-width="3" stroke-linecap="round"/>
+    <path d="M42 378H114" stroke="#8b5cff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M42 378V306" stroke="#8b5cff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1558 378H1486" stroke="#9eff00" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1558 378V306" stroke="#9eff00" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- subtle flicker/noise -->
+  <rect width="1600" height="420" rx="26" fill="white" opacity="0.04" mask="url(#noiseMask)">
+    <animate attributeName="opacity" values="0.015;0.045;0.02;0.04;0.015" dur="1.4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- bottom tape -->
+  <g transform="translate(86 360)">
+    <rect x="0" y="0" width="560" height="24" rx="12" fill="#0b1220" stroke="#7aa2ff" stroke-opacity="0.25"/>
+    <text class="tiny" x="18" y="17" font-size="13" fill="#c8d2ff">[ EPHEMERAL SIGNERS ]  scanning trace residue across EIP-712 wallets</text>
+  </g>
+</svg>
