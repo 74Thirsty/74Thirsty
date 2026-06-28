@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">TX Forensics animated README banner</title>
+  <desc id="desc">Cyber forensic banner for gadgetsaavy/tx-forensics with animated scan lines, transaction graph nodes, blocks, and terminal glow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="45%" stop-color="#07111f"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.24"/>
+      <stop offset="42%" stop-color="#0ea5e9" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#38bdf8" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="scan" x1="0" x2="1">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#67e8f9" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      .grid { animation: drift 18s linear infinite; }
+      .scan { animation: scan 4.8s ease-in-out infinite; }
+      .pulse { animation: pulse 2.4s ease-in-out infinite; transform-origin:center; }
+      .pulse2 { animation: pulse 2.4s ease-in-out infinite .8s; transform-origin:center; }
+      .flow { stroke-dasharray: 10 14; animation: flow 2.2s linear infinite; }
+      .blink { animation: blink 1s steps(2,end) infinite; }
+      .float { animation: float 4s ease-in-out infinite; }
+      .float2 { animation: float 5s ease-in-out infinite reverse; }
+      .type { animation: fadeSwap 7s ease-in-out infinite; }
+      @keyframes drift { from { transform: translate(0,0); } to { transform: translate(-44px,-44px); } }
+      @keyframes scan { 0% { transform: translateX(-260px); opacity:.0; } 12% { opacity:1; } 70% { opacity:1; } 100% { transform: translateX(1260px); opacity:0; } }
+      @keyframes flow { to { stroke-dashoffset: -48; } }
+      @keyframes pulse { 0%,100% { r:8; opacity:.72; } 50% { r:13; opacity:1; } }
+      @keyframes blink { 50% { opacity:0; } }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+      @keyframes fadeSwap { 0%,40% { opacity:1; } 50%,90% { opacity:.36; } 100% { opacity:1; } }
+      text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="360" rx="28" fill="url(#halo)"/>
+  <g class="grid"><rect x="-44" y="-44" width="1288" height="448" fill="url(#grid)"/></g>
+
+  <g opacity="0.42">
+    <path d="M0 58H1200M0 306H1200" stroke="#67e8f9" stroke-opacity="0.18"/>
+    <path d="M70 0V360M1130 0V360" stroke="#67e8f9" stroke-opacity="0.18"/>
+  </g>
+
+  <g transform="translate(82 78)" filter="url(#glow)">
+    <path class="flow" d="M32 126 C120 44, 214 48, 290 118 S466 194, 540 86" fill="none" stroke="#22d3ee" stroke-width="3" opacity=".85"/>
+    <path class="flow" d="M32 126 C142 210, 254 220, 360 154 S474 94, 540 86" fill="none" stroke="#a78bfa" stroke-width="2" opacity=".65"/>
+    <path class="flow" d="M142 64 L252 126 L376 78 L502 160" fill="none" stroke="#34d399" stroke-width="2.5" opacity=".72"/>
+    <g fill="#020617" stroke-width="3">
+      <circle class="pulse" cx="32" cy="126" r="9" stroke="#22d3ee"/>
+      <circle class="pulse2" cx="142" cy="64" r="9" stroke="#34d399"/>
+      <circle class="pulse" cx="252" cy="126" r="9" stroke="#a78bfa"/>
+      <circle class="pulse2" cx="376" cy="78" r="9" stroke="#22d3ee"/>
+      <circle class="pulse" cx="502" cy="160" r="9" stroke="#34d399"/>
+      <circle class="pulse2" cx="540" cy="86" r="9" stroke="#f59e0b"/>
+    </g>
+    <g font-size="13" fill="#bae6fd" opacity=".8">
+      <text x="-4" y="156">tx:0xA7…</text>
+      <text x="206" y="154">trace</text>
+      <text x="462" y="190">evidence</text>
+    </g>
+  </g>
+
+  <g transform="translate(720 72)" class="float" filter="url(#softGlow)">
+    <rect x="0" y="36" width="74" height="54" rx="9" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="84" y="36" width="74" height="54" rx="9" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+    <rect x="42" y="0" width="74" height="54" rx="9" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
+    <path d="M22 109h146c22 0 40-14 46-34 8 24-8 64-54 64H54c-32 0-52-12-64-32 10 4 20 4 32 2z" fill="#0891b2" opacity=".75"/>
+    <circle cx="203" cy="106" r="10" fill="#67e8f9" opacity=".65"/>
+  </g>
+
+  <g transform="translate(72 228)" opacity=".95">
+    <rect width="522" height="78" rx="14" fill="#020617" stroke="#1e3a8a" stroke-opacity=".9"/>
+    <text x="24" y="31" font-size="16" fill="#22d3ee">$ docker pull gadgetsaavy/tx-forensics</text>
+    <text x="24" y="58" font-size="15" fill="#86efac">forensic trace engine ready</text>
+    <rect class="blink" x="272" y="45" width="10" height="18" fill="#86efac"/>
+  </g>
+
+  <g transform="translate(590 102)">
+    <text x="0" y="34" font-size="22" fill="#67e8f9" opacity=".9">GADGETSAAVY /</text>
+    <text x="0" y="98" font-size="64" font-weight="900" fill="#f8fafc" filter="url(#glow)">TX FORENSICS</text>
+    <text class="type" x="3" y="134" font-size="20" fill="#c4b5fd">containerized transaction investigation</text>
+    <text x="3" y="164" font-size="16" fill="#94a3b8">trace • preserve • decode • report</text>
+  </g>
+
+  <g class="scan" filter="url(#glow)">
+    <rect x="0" y="0" width="180" height="360" fill="url(#scan)" opacity=".28"/>
+    <path d="M90 28V332" stroke="#67e8f9" stroke-width="2" stroke-opacity=".75"/>
+  </g>
+
+  <rect x="1.5" y="1.5" width="1197" height="357" rx="26" fill="none" stroke="#22d3ee" stroke-opacity=".35" stroke-width="3"/>
+</svg>
