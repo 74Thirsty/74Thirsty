@@ -190,8 +190,8 @@
     <animateMotion dur="3.4s" repeatCount="indefinite" path="M1105 230 H920 V205 H795"/>
   </circle>
 
-  <text x="600" y="174" text-anchor="middle" class="title">GADGET SAAVY</text>
-  <text x="600" y="-205" text-anchor="middle" class="reflection">GADGET SAAVY</text>
+  <text x="600" y="174" text-anchor="middle" class="title">gadgetSaavy</text>
+  <text x="600" y="-205" text-anchor="middle" class="reflection">gadgetSaavy</text>
 
   <text x="600" y="225" text-anchor="middle" class="subtitle">DISCOVER · CONNECT · PROSPER</text>
 
