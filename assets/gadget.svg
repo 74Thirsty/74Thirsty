@@ -1,0 +1,209 @@
+Done — use this full SVG:
+
+```svg
+<svg width="1200" height="320" viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="chromeText" x1="-100%" y1="0%" x2="200%" y2="0%">
+      <stop offset="0%" stop-color="#6b7280"/>
+      <stop offset="20%" stop-color="#e5e7eb"/>
+      <stop offset="40%" stop-color="#00eaff"/>
+      <stop offset="55%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#ff1493"/>
+      <stop offset="100%" stop-color="#64748b"/>
+      <animate attributeName="x1" values="-100%;100%;-100%" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0%;200%;0%" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <filter id="blueGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="hardGlow">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="hex" width="42" height="36" patternUnits="userSpaceOnUse">
+      <path d="M21 1 L41 12 L41 24 L21 35 L1 24 L1 12 Z" fill="none" stroke="#1f6feb" stroke-width="1" opacity=".12"/>
+    </pattern>
+
+    <style>
+      .bg { fill:#0d1117; }
+      .hex { fill:url(#hex); opacity:.38; }
+
+      .frame {
+        fill:none;
+        stroke:#00eaff;
+        stroke-width:2.5;
+        stroke-dasharray:160 34;
+        filter:url(#hardGlow);
+        animation:flow 3s linear infinite, pulse 1.8s ease-in-out infinite alternate;
+      }
+
+      .pink-line {
+        fill:none;
+        stroke:#ff1493;
+        stroke-width:4;
+        stroke-linecap:round;
+        filter:url(#hardGlow);
+        stroke-dasharray:90 500;
+        animation:pinkRun 2.4s linear infinite;
+      }
+
+      .trace {
+        fill:none;
+        stroke:#1f6feb;
+        stroke-width:1.4;
+        opacity:.7;
+      }
+
+      .packet {
+        fill:#00eaff;
+        filter:url(#hardGlow);
+      }
+
+      .title {
+        font-family: Orbitron, Audiowide, Impact, sans-serif;
+        font-size:92px;
+        font-weight:900;
+        letter-spacing:6px;
+        fill:url(#chromeText);
+        stroke:#00eaff;
+        stroke-width:1.5;
+        filter:url(#blueGlow);
+        animation:flicker 3.8s infinite;
+      }
+
+      .subtitle {
+        font-family: Orbitron, Consolas, monospace;
+        font-size:18px;
+        letter-spacing:8px;
+        fill:#7dd3fc;
+        opacity:.9;
+        filter:url(#blueGlow);
+      }
+
+      .data {
+        font-family: Consolas, monospace;
+        font-size:13px;
+        fill:#58a6ff;
+        opacity:.22;
+        animation:dataMove 12s linear infinite;
+      }
+
+      .scan {
+        fill:url(#scanGrad);
+        opacity:.55;
+        animation:scan 6s linear infinite;
+      }
+
+      .spark {
+        fill:#ff1493;
+        filter:url(#hardGlow);
+        animation:spark 2s infinite ease-out;
+      }
+
+      .reflection {
+        font-family: Orbitron, Audiowide, Impact, sans-serif;
+        font-size:92px;
+        font-weight:900;
+        letter-spacing:6px;
+        fill:#00eaff;
+        opacity:.08;
+        transform:scale(1,-1);
+      }
+
+      @keyframes flow {
+        to { stroke-dashoffset:-388; }
+      }
+
+      @keyframes pulse {
+        from { opacity:.55; }
+        to { opacity:1; }
+      }
+
+      @keyframes pinkRun {
+        to { stroke-dashoffset:-590; }
+      }
+
+      @keyframes dataMove {
+        from { transform:translateX(-220px); }
+        to { transform:translateX(260px); }
+      }
+
+      @keyframes scan {
+        0% { transform:translateX(-260px); opacity:0; }
+        15% { opacity:.55; }
+        50% { opacity:.22; }
+        100% { transform:translateX(1250px); opacity:0; }
+      }
+
+      @keyframes flicker {
+        0%,100% { opacity:1; }
+        7% { opacity:.82; }
+        8% { opacity:1; }
+        41% { opacity:.93; }
+        42% { opacity:1; }
+        78% { opacity:.75; }
+        79% { opacity:1; }
+      }
+
+      @keyframes spark {
+        0% { opacity:0; transform:scale(.4); }
+        15% { opacity:1; }
+        100% { opacity:0; transform:translate(42px,-18px) scale(1.4); }
+      }
+    </style>
+
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00eaff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00eaff" stop-opacity=".45"/>
+      <stop offset="100%" stop-color="#ff1493" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect class="bg" width="1200" height="320"/>
+  <rect class="hex" width="1200" height="320"/>
+
+  <rect class="scan" x="0" y="0" width="160" height="320"/>
+
+  <text class="data" x="40" y="58">7F 8A 2C FF 91 03 AE 44 10 BC 9D 22 EF 01 5A C0</text>
+  <text class="data" x="120" y="278">01010111 00101100 11110000 10011101 01101010 00011100</text>
+
+  <path class="frame" d="M45 55 H455 L490 25 H710 L745 55 H1155 V265 H745 L710 295 H490 L455 265 H45 Z"/>
+  <path class="pink-line" d="M45 55 H455 L490 25 H710 L745 55 H1155"/>
+
+  <path class="trace" d="M95 95 H245 V125 H360"/>
+  <path class="trace" d="M1105 95 H955 V125 H840"/>
+  <path class="trace" d="M95 230 H280 V205 H405"/>
+  <path class="trace" d="M1105 230 H920 V205 H795"/>
+
+  <circle class="packet" r="4">
+    <animateMotion dur="3s" repeatCount="indefinite" path="M95 95 H245 V125 H360"/>
+  </circle>
+
+  <circle class="packet" r="4">
+    <animateMotion dur="3.4s" repeatCount="indefinite" path="M1105 230 H920 V205 H795"/>
+  </circle>
+
+  <text x="600" y="174" text-anchor="middle" class="title">GADGET SAAVY</text>
+  <text x="600" y="-205" text-anchor="middle" class="reflection">GADGET SAAVY</text>
+
+  <text x="600" y="225" text-anchor="middle" class="subtitle">TX FORENSICS · CHAIN INTELLIGENCE · EXECUTION SYSTEMS</text>
+
+  <circle class="spark" cx="90" cy="55" r="3"/>
+  <circle class="spark" cx="1135" cy="265" r="3"/>
+  <circle class="spark" cx="745" cy="55" r="2.5"/>
+  <circle class="spark" cx="455" cy="265" r="2.5"/>
+
+  <line x1="170" y1="250" x2="1030" y2="250" stroke="#00eaff" stroke-width="1" opacity=".22"/>
+  <line x1="230" y1="258" x2="970" y2="258" stroke="#ff1493" stroke-width="1.5" opacity=".45"/>
+</svg>
+```
