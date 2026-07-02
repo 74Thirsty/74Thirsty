@@ -1,4 +1,4 @@
-![Sheen Banner](https://chatgpt.com/s/t_6a466595fa4881919368d8f11bfcbfbb)
+![Sheen Banner](https://github.com/74Thirsty/74Thirsty/blob/main/assets/gadget.svg)
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=74Thirsty&style=flat-square" alt="profile views" />
