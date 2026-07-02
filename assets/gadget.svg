@@ -1,6 +1,3 @@
-Done — use this full SVG:
-
-```svg
 <svg width="1200" height="320" viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="chromeText" x1="-100%" y1="0%" x2="200%" y2="0%">
@@ -206,4 +203,3 @@ Done — use this full SVG:
   <line x1="170" y1="250" x2="1030" y2="250" stroke="#00eaff" stroke-width="1" opacity=".22"/>
   <line x1="230" y1="258" x2="970" y2="258" stroke="#ff1493" stroke-width="1.5" opacity=".45"/>
 </svg>
-```
