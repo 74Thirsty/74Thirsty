@@ -1,0 +1,156 @@
+<svg width="100%" height="140" viewBox="0 0 800 140" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#050816"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+
+    <!-- Glowing protocol nodes -->
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Animated dash for links -->
+    <style>
+      <![CDATA[
+        .flow-line {
+          stroke-dasharray: 6 8;
+          animation: dash 4s linear infinite;
+        }
+        @keyframes dash {
+          from { stroke-dashoffset: 0; }
+          to   { stroke-dashoffset: -80; }
+        }
+
+        .pulse-node {
+          animation: pulse 2.4s ease-in-out infinite;
+        }
+        @keyframes pulse {
+          0%   { transform: scale(1);   opacity: 0.9; }
+          50%  { transform: scale(1.25); opacity: 0.4; }
+          100% { transform: scale(1);   opacity: 0.9; }
+        }
+
+        .spark {
+          animation: sparkMove 3s linear infinite;
+        }
+        @keyframes sparkMove {
+          0%   { transform: translateX(0); opacity: 0; }
+          10%  { opacity: 1; }
+          90%  { opacity: 1; }
+          100% { transform: translateX(260px); opacity: 0; }
+        }
+
+        .title-glow {
+          animation: titleGlow 3s ease-in-out infinite;
+        }
+        @keyframes titleGlow {
+          0%   { text-shadow: 0 0 4px rgba(34,197,94,0.6); }
+          50%  { text-shadow: 0 0 14px rgba(34,197,94,0.9); }
+          100% { text-shadow: 0 0 4px rgba(34,197,94,0.6); }
+        }
+
+        .subtitle-fade {
+          animation: subtitleFade 5s ease-in-out infinite;
+        }
+        @keyframes subtitleFade {
+          0%   { opacity: 0.4; }
+          50%  { opacity: 1; }
+          100% { opacity: 0.4; }
+        }
+      ]]>
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="140" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#1f2937" stroke-width="0.5" opacity="0.35">
+    <line x1="40" x2="760" y1="30" y2="30"/>
+    <line x1="40" x2="760" y1="60" y2="60"/>
+    <line x1="40" x2="760" y1="90" y2="90"/>
+    <line x1="40" x2="760" y1="120" y2="120"/>
+    <line y1="20" y2="130" x1="120" x2="120"/>
+    <line y1="20" y2="130" x1="220" x2="220"/>
+    <line y1="20" y2="130" x1="320" x2="320"/>
+    <line y1="20" y2="130" x1="420" x2="420"/>
+    <line y1="20" y2="130" x1="520" x2="520"/>
+    <line y1="20" y2="130" x1="620" x2="620"/>
+    <line y1="20" y2="130" x1="720" x2="720"/>
+  </g>
+
+  <!-- Flow lines (protocol streams) -->
+  <g stroke="#22c55e" stroke-width="2" fill="none" opacity="0.9">
+    <path class="flow-line" d="M80 50 C 200 20, 320 80, 440 40 S 640 60, 720 40"/>
+    <path class="flow-line" d="M80 90 C 200 120, 320 60, 440 100 S 640 80, 720 100"/>
+  </g>
+
+  <!-- Nodes (registry entries / protocols) -->
+  <g>
+    <!-- Left cluster -->
+    <g transform="translate(110,70)">
+      <circle r="22" fill="#0b1120" stroke="#22c55e" stroke-width="1.5"/>
+      <circle class="pulse-node" r="22" fill="url(#nodeGlow)"/>
+      <rect x="-10" y="-10" width="20" height="20" rx="3" fill="#22c55e" opacity="0.9"/>
+      <path d="M-4 0 L0 6 L8 -6" stroke="#0b1120" stroke-width="2" fill="none"/>
+    </g>
+
+    <!-- Middle cluster -->
+    <g transform="translate(260,50)">
+      <circle r="18" fill="#0b1120" stroke="#22c55e" stroke-width="1.5"/>
+      <circle class="pulse-node" r="18" fill="url(#nodeGlow)"/>
+      <path d="M-6 0 L0 -8 L6 0 L0 8 Z" fill="#22c55e"/>
+    </g>
+
+    <!-- Right cluster -->
+    <g transform="translate(420,90)">
+      <circle r="20" fill="#0b1120" stroke="#22c55e" stroke-width="1.5"/>
+      <circle class="pulse-node" r="20" fill="url(#nodeGlow)"/>
+      <path d="M-7 -4 H7 L0 8 Z" fill="#22c55e"/>
+    </g>
+
+    <!-- Far-right registry -->
+    <g transform="translate(620,70)">
+      <rect x="-26" y="-18" width="52" height="36" rx="6" fill="#0b1120" stroke="#22c55e" stroke-width="1.5"/>
+      <line x1="-18" y1="-6" x2="18" y2="-6" stroke="#22c55e" stroke-width="2"/>
+      <line x1="-18" y1="2" x2="10" y2="2" stroke="#22c55e" stroke-width="1.5"/>
+      <circle cx="16" cy="2" r="2" fill="#22c55e"/>
+    </g>
+  </g>
+
+  <!-- Moving spark (wizard casting through the registry) -->
+  <g transform="translate(140,70)">
+    <circle class="spark" r="4" fill="#facc15"/>
+  </g>
+
+  <!-- Title & subtitle -->
+  <g>
+    <text x="60" y="45" fill="#e5e7eb" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+          font-size="22" font-weight="600">
+      Hirschauer’s Protocol Registry Wizard
+    </text>
+
+    <text x="62" y="70" fill="#9ca3af" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+          font-size="13" class="subtitle-fade">
+      Orchestrate, audit, and visualize protocol registries—like a blockchain-native config spellbook.
+    </text>
+
+    <text x="62" y="95" fill="#22c55e" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+          font-size="11">
+      docker pull gadgetsaavy/hirschauers-protocol-registry-wizard:latest
+    </text>
+  </g>
+
+  <!-- Right-side “wizard sigil” -->
+  <g transform="translate(720,70)">
+    <circle r="30" fill="none" stroke="#22c55e" stroke-width="1.5" opacity="0.7"/>
+    <circle r="20" fill="none" stroke="#22c55e" stroke-width="1" opacity="0.9"/>
+    <circle r="10" fill="#22c55e" opacity="0.9"/>
+    <path d="M0 -16 L4 -4 L16 -4 L6 4 L10 16 L0 8 L-10 16 L-6 4 L-16 -4 L-4 -4 Z"
+          fill="#0b1120" stroke="#e5e7eb" stroke-width="1"/>
+  </g>
+</svg>
