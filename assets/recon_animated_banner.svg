@@ -1,0 +1,248 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 540" role="img" aria-labelledby="title desc">
+  <title id="title">RECON animated cyber intelligence banner</title>
+  <desc id="desc">Animated SVG banner for the Recon technical manual: network reconnaissance, DNS intelligence, packet capture, wireless auditing, OSINT, hash analysis, and reporting.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020617"/>
+      <stop offset="0.38" stop-color="#061527"/>
+      <stop offset="0.72" stop-color="#0b1026"/>
+      <stop offset="1" stop-color="#140d2d"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0" stop-color="#00e5ff" stop-opacity="0.95"/>
+      <stop offset="0.23" stop-color="#4d7cff" stop-opacity="0.35"/>
+      <stop offset="0.57" stop-color="#8b5cf6" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e9fbff"/>
+      <stop offset="0.27" stop-color="#00d4ff"/>
+      <stop offset="0.55" stop-color="#ffffff"/>
+      <stop offset="0.78" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#00ffa8"/>
+      <animate attributeName="x1" values="-0.45;0.25;-0.45" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0.55;1.35;0.55" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="wireGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00ffa8" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#00d4ff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="heavyGlow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0  0 0 0 0 0.83  0 0 0 0 1  0 0 0 0.8 0" result="blueBlur"/>
+      <feMerge>
+        <feMergeNode in="blueBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glassBlur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="#1b6f9b" stroke-opacity="0.16" stroke-width="1"/>
+    </pattern>
+    <pattern id="hex" width="72" height="62.4" patternUnits="userSpaceOnUse">
+      <path d="M18 1 L54 1 L72 31.2 L54 61.4 L18 61.4 L0 31.2 Z" fill="none" stroke="#00d4ff" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+    <mask id="fadeEdges">
+      <linearGradient id="edgeFade" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="black"/>
+        <stop offset="0.08" stop-color="white"/>
+        <stop offset="0.92" stop-color="white"/>
+        <stop offset="1" stop-color="black"/>
+      </linearGradient>
+      <rect width="1920" height="540" fill="url(#edgeFade)"/>
+    </mask>
+    <path id="arc1" d="M230 395 C515 85 846 85 1155 280 S1560 450 1810 145"/>
+    <path id="arc2" d="M95 145 C385 250 535 495 855 363 S1310 70 1740 350"/>
+    <path id="arc3" d="M300 105 C600 208 650 395 975 402 S1400 210 1680 115"/>
+    <path id="arc4" d="M660 475 C780 220 1055 155 1260 255 S1570 360 1850 250"/>
+    <style>
+      .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+      .sans{font-family:Inter,Segoe UI,Arial,sans-serif}
+      .gridMove{animation:gridShift 16s linear infinite}
+      .hexMove{animation:hexShift 22s linear infinite}
+      .slowSpin{transform-box:fill-box;transform-origin:center;animation:spin 36s linear infinite}
+      .reverseSpin{transform-box:fill-box;transform-origin:center;animation:spin 52s linear infinite reverse}
+      .pulse{animation:pulse 2.8s ease-in-out infinite}
+      .pulse2{animation:pulse 4s ease-in-out infinite .8s}
+      .blink{animation:blink 1.6s steps(2,end) infinite}
+      .float{animation:float 7s ease-in-out infinite}
+      .float2{animation:float2 8.5s ease-in-out infinite}
+      .sweep{animation:sweep 5.8s ease-in-out infinite}
+      .dash{stroke-dasharray:8 18;animation:dash 12s linear infinite}
+      .dashFast{stroke-dasharray:4 12;animation:dash 5.6s linear infinite}
+      .scan{animation:scan 5.2s cubic-bezier(.55,.03,.35,.98) infinite}
+      .nodeText{font-size:18px;letter-spacing:.14em;fill:#baf5ff;opacity:.88}
+      .panelText{font-size:22px;font-weight:800;letter-spacing:.16em;fill:#e8fbff}
+      .tiny{font-size:13px;letter-spacing:.12em;fill:#86eaff;opacity:.78}
+      .codeLine{font-size:13px;fill:#39ffcc;opacity:.48}
+      @keyframes gridShift{from{transform:translate(0,0)}to{transform:translate(48px,48px)}}
+      @keyframes hexShift{from{transform:translate(0,0)}to{transform:translate(-72px,62px)}}
+      @keyframes spin{to{transform:rotate(360deg)}}
+      @keyframes pulse{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.16)}}
+      @keyframes blink{0%,49%{opacity:.2}50%,100%{opacity:1}}
+      @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+      @keyframes float2{0%,100%{transform:translateY(0) translateX(0)}50%{transform:translateY(12px) translateX(-7px)}}
+      @keyframes sweep{0%{transform:translateX(-900px);opacity:0}20%{opacity:.85}70%{opacity:.3}100%{transform:translateX(1400px);opacity:0}}
+      @keyframes dash{to{stroke-dashoffset:-260}}
+      @keyframes scan{0%{transform:translateX(-140px);opacity:0}12%{opacity:.6}50%{opacity:1}88%{opacity:.6}100%{transform:translateX(1980px);opacity:0}}
+    </style>
+  </defs>
+
+  <rect width="1920" height="540" fill="url(#bg)"/>
+  <rect class="gridMove" x="-60" y="-60" width="2040" height="660" fill="url(#grid)" opacity="0.75"/>
+  <rect class="hexMove" x="-120" y="-100" width="2160" height="760" fill="url(#hex)" opacity="0.92"/>
+  <rect width="1920" height="540" fill="url(#coreGlow)" opacity="0.72"/>
+
+  <!-- atmosphere particles -->
+  <g mask="url(#fadeEdges)" opacity="0.9">
+    <g fill="#00d4ff" opacity="0.42">
+      <circle cx="120" cy="88" r="2"><animate attributeName="cy" values="88;74;88" dur="7s" repeatCount="indefinite"/></circle>
+      <circle cx="260" cy="420" r="1.8"><animate attributeName="cy" values="420;396;420" dur="9s" repeatCount="indefinite"/></circle>
+      <circle cx="410" cy="160" r="2.2"><animate attributeName="cy" values="160;145;160" dur="6.2s" repeatCount="indefinite"/></circle>
+      <circle cx="575" cy="72" r="1.4"><animate attributeName="cy" values="72;95;72" dur="8s" repeatCount="indefinite"/></circle>
+      <circle cx="760" cy="455" r="2"><animate attributeName="cy" values="455;430;455" dur="7.5s" repeatCount="indefinite"/></circle>
+      <circle cx="935" cy="108" r="1.9"><animate attributeName="cy" values="108;82;108" dur="8.5s" repeatCount="indefinite"/></circle>
+      <circle cx="1135" cy="470" r="1.7"><animate attributeName="cy" values="470;450;470" dur="6.8s" repeatCount="indefinite"/></circle>
+      <circle cx="1315" cy="86" r="2.1"><animate attributeName="cy" values="86;111;86" dur="7.2s" repeatCount="indefinite"/></circle>
+      <circle cx="1505" cy="410" r="2"><animate attributeName="cy" values="410;384;410" dur="9.1s" repeatCount="indefinite"/></circle>
+      <circle cx="1750" cy="185" r="1.6"><animate attributeName="cy" values="185;165;185" dur="6.4s" repeatCount="indefinite"/></circle>
+    </g>
+  </g>
+
+  <!-- route arcs -->
+  <g fill="none" stroke-linecap="round" mask="url(#fadeEdges)">
+    <use href="#arc1" stroke="#00d4ff" stroke-opacity="0.22" stroke-width="2"/>
+    <use href="#arc2" stroke="#8b5cf6" stroke-opacity="0.26" stroke-width="2"/>
+    <use href="#arc3" stroke="#00ffa8" stroke-opacity="0.20" stroke-width="2"/>
+    <use href="#arc4" stroke="#4d7cff" stroke-opacity="0.22" stroke-width="2"/>
+    <use href="#arc1" class="dash" stroke="url(#wireGrad)" stroke-width="3" filter="url(#softGlow)"/>
+    <use href="#arc2" class="dashFast" stroke="url(#wireGrad)" stroke-width="2.5" filter="url(#softGlow)"/>
+    <use href="#arc3" class="dash" stroke="url(#wireGrad)" stroke-width="2.5" filter="url(#softGlow)"/>
+    <use href="#arc4" class="dashFast" stroke="url(#wireGrad)" stroke-width="2.8" filter="url(#softGlow)"/>
+  </g>
+
+  <!-- traveling packets -->
+  <g filter="url(#heavyGlow)">
+    <circle r="7" fill="#00ffa8"><animateMotion dur="6.2s" repeatCount="indefinite"><mpath href="#arc1"/></animateMotion></circle>
+    <circle r="5" fill="#00d4ff"><animateMotion dur="4.8s" begin="-2s" repeatCount="indefinite"><mpath href="#arc2"/></animateMotion></circle>
+    <circle r="6" fill="#8b5cf6"><animateMotion dur="7.5s" begin="-1.2s" repeatCount="indefinite"><mpath href="#arc3"/></animateMotion></circle>
+    <circle r="4" fill="#ffffff"><animateMotion dur="5.6s" begin="-3s" repeatCount="indefinite"><mpath href="#arc4"/></animateMotion></circle>
+  </g>
+
+  <!-- radar / core glyph -->
+  <g transform="translate(1460 272)" opacity="0.9">
+    <circle r="154" fill="none" stroke="#00d4ff" stroke-opacity="0.19" stroke-width="2"/>
+    <circle r="105" fill="none" stroke="#00ffa8" stroke-opacity="0.16" stroke-width="2"/>
+    <circle r="58" fill="none" stroke="#8b5cf6" stroke-opacity="0.26" stroke-width="2"/>
+    <g class="slowSpin">
+      <path d="M0 0 L145 -42 A151 151 0 0 1 130 76 Z" fill="#00d4ff" opacity="0.13"/>
+      <line x1="0" y1="0" x2="160" y2="0" stroke="#00d4ff" stroke-width="2.5" stroke-opacity="0.8" filter="url(#softGlow)"/>
+    </g>
+    <g class="reverseSpin" fill="none" stroke="#00ffa8" stroke-opacity="0.36" stroke-width="2" stroke-dasharray="10 18">
+      <circle r="128"/>
+      <path d="M-105 0H105M0-105V105"/>
+    </g>
+    <g filter="url(#heavyGlow)">
+      <circle class="pulse" cx="-62" cy="-78" r="7" fill="#00ffa8"/>
+      <circle class="pulse2" cx="72" cy="36" r="6" fill="#00d4ff"/>
+      <circle class="pulse" cx="18" cy="-22" r="5" fill="#ffffff"/>
+    </g>
+  </g>
+
+  <!-- left terminal panel -->
+  <g class="float" transform="translate(92 84)">
+    <rect width="420" height="250" rx="22" fill="#061221" fill-opacity="0.58" stroke="#00d4ff" stroke-opacity="0.38"/>
+    <rect x="14" y="14" width="392" height="36" rx="12" fill="#081b2b" stroke="#204c69" stroke-opacity="0.8"/>
+    <circle cx="37" cy="32" r="5" fill="#ff5f56" opacity="0.8"/><circle cx="58" cy="32" r="5" fill="#ffbd2e" opacity="0.8"/><circle cx="79" cy="32" r="5" fill="#27c93f" opacity="0.8"/>
+    <text x="105" y="38" class="mono tiny">recon://operator/session</text>
+    <text x="28" y="82" class="mono codeLine">$ nmap -sV -sC -T4 target</text>
+    <text x="28" y="112" class="mono codeLine">[+] DNS A AAAA MX NS TXT SOA</text>
+    <text x="28" y="142" class="mono codeLine">[+] TSHARK PCAP STREAM ARMED</text>
+    <text x="28" y="172" class="mono codeLine">[+] OSINT MODULES ONLINE</text>
+    <text x="28" y="202" class="mono codeLine">[+] WIRELESS AUDIT READY</text>
+    <text x="28" y="232" class="mono codeLine">report://UTC_TARGET_PREFIX.ext</text>
+    <rect class="blink" x="307" y="220" width="12" height="18" fill="#00ffa8" opacity="0.85"/>
+  </g>
+
+  <!-- title group -->
+  <g transform="translate(560 142)">
+    <text x="0" y="98" class="sans" font-size="132" font-weight="900" letter-spacing="0.06em" fill="url(#titleGrad)" filter="url(#heavyGlow)">RECON</text>
+    <rect class="sweep" x="0" y="116" width="520" height="5" rx="2.5" fill="#ffffff" filter="url(#softGlow)"/>
+    <text x="8" y="146" class="mono" font-size="25" letter-spacing="0.22em" fill="#dffbff" opacity="0.92">ADVANCED NETWORK INTELLIGENCE PLATFORM</text>
+    <text x="8" y="184" class="mono" font-size="17" letter-spacing="0.16em" fill="#7feaff" opacity="0.78">DNS • NMAP • PCAP • OSINT • WIRELESS • HASHCAT • REPORTING</text>
+  </g>
+
+  <!-- module chips -->
+  <g class="float2" transform="translate(575 368)">
+    <g>
+      <rect width="114" height="42" rx="14" fill="#071827" stroke="#00d4ff" stroke-opacity="0.55"/>
+      <text x="22" y="28" class="mono tiny" fill="#e9fbff">NMAP</text>
+    </g>
+    <g transform="translate(132 0)">
+      <rect width="102" height="42" rx="14" fill="#071827" stroke="#00ffa8" stroke-opacity="0.45"/>
+      <text x="27" y="28" class="mono tiny">DNS</text>
+    </g>
+    <g transform="translate(252 0)">
+      <rect width="118" height="42" rx="14" fill="#071827" stroke="#8b5cf6" stroke-opacity="0.58"/>
+      <text x="24" y="28" class="mono tiny">OSINT</text>
+    </g>
+    <g transform="translate(388 0)">
+      <rect width="108" height="42" rx="14" fill="#071827" stroke="#00d4ff" stroke-opacity="0.55"/>
+      <text x="28" y="28" class="mono tiny">PCAP</text>
+    </g>
+    <g transform="translate(514 0)">
+      <rect width="144" height="42" rx="14" fill="#071827" stroke="#00ffa8" stroke-opacity="0.45"/>
+      <text x="21" y="28" class="mono tiny">WIRELESS</text>
+    </g>
+    <g transform="translate(676 0)">
+      <rect width="132" height="42" rx="14" fill="#071827" stroke="#8b5cf6" stroke-opacity="0.58"/>
+      <text x="22" y="28" class="mono tiny">HASHCAT</text>
+    </g>
+  </g>
+
+  <!-- bottom waveforms -->
+  <g transform="translate(0 455)" opacity="0.62" mask="url(#fadeEdges)">
+    <path d="M0 44 C90 18 135 18 220 44 S370 70 500 44 S670 18 790 44 S950 72 1090 44 S1265 15 1410 44 S1630 70 1920 38" fill="none" stroke="#00d4ff" stroke-width="2" stroke-opacity="0.65" class="dash"/>
+    <path d="M0 67 C160 30 260 88 420 55 S700 25 880 66 S1160 92 1340 50 S1590 20 1920 72" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-opacity="0.54" class="dashFast"/>
+  </g>
+
+  <!-- scan beam -->
+  <rect class="scan" x="0" y="0" width="96" height="540" fill="#00d4ff" opacity="0.12"/>
+
+  <!-- nodes -->
+  <g filter="url(#softGlow)">
+    <g fill="#00d4ff">
+      <circle class="pulse" cx="640" cy="96" r="4"/><circle class="pulse2" cx="830" cy="310" r="5"/><circle class="pulse" cx="1034" cy="92" r="4"/><circle class="pulse2" cx="1220" cy="418" r="5"/><circle class="pulse" cx="1680" cy="115" r="4"/><circle class="pulse2" cx="230" cy="395" r="5"/>
+    </g>
+    <g fill="#00ffa8">
+      <circle class="pulse2" cx="300" cy="105" r="4"/><circle class="pulse" cx="855" cy="363" r="5"/><circle class="pulse2" cx="1155" cy="280" r="5"/><circle class="pulse" cx="1740" cy="350" r="4"/>
+    </g>
+  </g>
+
+  <!-- right side labels -->
+  <g transform="translate(1585 70)" opacity="0.9">
+    <text class="mono nodeText" x="0" y="0">IPV4/IPV6</text>
+    <text class="mono nodeText" x="38" y="42">TCP/UDP</text>
+    <text class="mono nodeText" x="-18" y="84">WHOIS/ASN</text>
+    <text class="mono nodeText" x="52" y="126">SIP/VOIP</text>
+    <text class="mono nodeText" x="-8" y="168">WPA/PMKID</text>
+  </g>
+
+  <!-- top metadata bar -->
+  <g opacity="0.85">
+    <rect x="0" y="0" width="1920" height="42" fill="#010711" fill-opacity="0.7"/>
+    <text x="32" y="27" class="mono tiny">RECON TECHNICAL MANUAL • ZERO THIRD-PARTY CORE • PYTHON 3.8+ • SUBPROCESS TOOL ORCHESTRATION</text>
+    <text x="1510" y="27" class="mono tiny">STATUS: MODULES ONLINE</text>
+    <circle class="blink" cx="1854" cy="21" r="6" fill="#00ffa8"/>
+  </g>
+</svg>
