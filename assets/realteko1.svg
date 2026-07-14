@@ -1,0 +1,61 @@
+<svg width="100%" height="180" viewBox="0 0 1200 180" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Dark gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </linearGradient>
+
+    <!-- Glitch scan -->
+    <linearGradient id="scan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0,255,200,0)" />
+      <stop offset="50%" stop-color="rgba(0,255,200,0.35)" />
+      <stop offset="100%" stop-color="rgba(0,255,200,0)" />
+    </linearGradient>
+
+    <!-- Glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Grid -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <rect width="30" height="30" fill="none" stroke="#1a1a1f" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="180" fill="url(#bg)" />
+  <rect width="1200" height="180" fill="url(#grid)" opacity="0.22" />
+
+  <!-- Glitch scan -->
+  <rect width="1200" height="40" fill="url(#scan)" y="-40">
+    <animate attributeName="y" from="-40" to="220" dur="1.8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Title -->
+  <text x="50%" y="55%" text-anchor="middle"
+        font-family="Consolas, monospace"
+        font-size="36"
+        fill="#00ffc8"
+        filter="url(#glow)">
+    How I Got a Windows-Only WiFi 6 Adapter Working on Linux
+    <animate attributeName="opacity" values="1;0.7;1" dur="2.5s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Subline -->
+  <text x="50%" y="82%" text-anchor="middle"
+        font-family="Consolas, monospace"
+        font-size="18"
+        fill="#7affea"
+        opacity="0.85">
+    D-Link DWA-1850 • Realtek RTL8852AU • AX1800 • USB • Out-of-tree Linux driver
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3.5s" repeatCount="indefinite"/>
+  </text>
+
+</svg>
