@@ -1,0 +1,51 @@
+<svg width="100%" height="180" viewBox="0 0 900 180" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="100%" stop-color="#111122"/>
+    </linearGradient>
+
+    <!-- Animated grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none" stroke="#1f1f3a" stroke-width="1">
+        <animate attributeName="stroke" values="#1f1f3a; #2a2a55; #1f1f3a" dur="4s" repeatCount="indefinite"/>
+      </rect>
+    </pattern>
+
+    <!-- Neon glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="180" fill="url(#grad)"/>
+  <rect width="900" height="180" fill="url(#grid)" opacity="0.25"/>
+
+  <!-- Animated scanline -->
+  <rect width="900" height="4" y="-4" fill="#00eaff">
+    <animate attributeName="y" from="-4" to="184" dur="2.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.0;0.4;0.0" dur="2.8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Main Title -->
+  <text x="50%" y="50%" text-anchor="middle" fill="#00eaff" font-size="48" font-family="Consolas, monospace"
+        filter="url(#glow)">
+    rtl8852au-dwa1850
+    <animate attributeName="letter-spacing" values="2;6;2" dur="3s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="50%" y="78%" text-anchor="middle" fill="#9cfaff" font-size="20" font-family="Consolas, monospace"
+        opacity="0.8">
+    Linux WiFi 6 Driver • Monitor Mode • DKMS • Dashboard
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="4s" repeatCount="indefinite"/>
+  </text>
+
+</svg>
