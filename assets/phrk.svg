@@ -1,63 +1,69 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250">
   <defs>
-    <!-- Neon gradient and glow filters -->
+    <!-- Text gradient -->
     <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ff00cc"/>
+      <stop offset="50%" stop-color="#8800ff"/>
       <stop offset="100%" stop-color="#00ffff"/>
     </linearGradient>
 
+    <!-- Strong neon glow -->
     <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feFlood flood-color="#00ffff" flood-opacity="0.8"/>
-      <feComposite in2="blur" operator="in"/>
       <feMerge>
-        <feMergeNode/>
+        <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <!-- Animated shimmer gradient -->
-    <linearGradient id="shimmerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="white" stop-opacity="0"/>
-      <stop offset="50%" stop-color="white" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="white" stop-opacity="0"/>
-      <animateTransform attributeName="gradientTransform"
-        type="translate" from="-1 0" to="1 0"
-        dur="3s" repeatCount="indefinite" />
-    </linearGradient>
+    <!-- Soft glow for background grid -->
+    <filter id="gridGlow">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
   </defs>
+
+  <!-- Background -->
+  <rect width="800" height="250" fill="#050505"/>
+
+  <!-- Cyberpunk grid -->
+  <g stroke="#00ffff" stroke-width="0.4" opacity="0.25" filter="url(#gridGlow)">
+    <!-- Vertical lines -->
+    <line x1="100" y1="0" x2="100" y2="250"/>
+    <line x1="200" y1="0" x2="200" y2="250"/>
+    <line x1="300" y1="0" x2="300" y2="250"/>
+    <line x1="400" y1="0" x2="400" y2="250"/>
+    <line x1="500" y1="0" x2="500" y2="250"/>
+    <line x1="600" y1="0" x2="600" y2="250"/>
+    <line x1="700" y1="0" x2="700" y2="250"/>
+
+    <!-- Horizontal lines -->
+    <line x1="0" y1="60" x2="800" y2="60"/>
+    <line x1="0" y1="120" x2="800" y2="120"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+  </g>
 
   <!-- Outer border -->
   <rect x="20" y="40" width="760" height="170" rx="30" ry="30"
         stroke="#00ffff" stroke-width="6"
-        stroke-dasharray="15 10"
         fill="none"
-        filter="url(#neonGlow)">
-    <animate attributeName="stroke-dashoffset" from="0" to="100"
-             dur="6s" repeatCount="indefinite"/>
-  </rect>
+        filter="url(#neonGlow)"/>
+
+  <!-- Inner border -->
+  <rect x="30" y="50" width="740" height="150" rx="25" ry="25"
+        stroke="#ff00cc" stroke-width="3"
+        fill="none"
+        opacity="0.8"
+        filter="url(#neonGlow)"/>
 
   <!-- PHREAK text -->
-  <text x="400" y="150" text-anchor="middle" font-size="96"
-        font-family="Orbitron, 'Audiowide', sans-serif"
-        fill="url(#textGradient)" stroke="#ff0099" stroke-width="3"
-        filter="url(#neonGlow)" letter-spacing="4">
-    PHREAK
-    <animate attributeName="opacity" values="1;0.8;1" dur="1.5s" repeatCount="indefinite"/>
-  </text>
-
-  <!-- Shimmer overlay -->
-  <text x="400" y="150" text-anchor="middle" font-size="96"
-        font-family="Orbitron, 'Audiowide', sans-serif"
-        fill="url(#shimmerGradient)" opacity="0.5">
+  <text x="400" y="150" text-anchor="middle"
+        font-size="96"
+        font-family="sans-serif"
+        fill="url(#textGradient)"
+        stroke="#ffffff"
+        stroke-width="2"
+        letter-spacing="6"
+        filter="url(#neonGlow)">
     PHREAK
   </text>
-
-  <!-- Subtle flicker -->
-  <rect x="0" y="0" width="800" height="250" fill="black" opacity="0">
-    <animate attributeName="opacity"
-             values="0;0;0.1;0;0;0.15;0"
-             dur="4s"
-             repeatCount="indefinite"/>
-  </rect>
 </svg>
