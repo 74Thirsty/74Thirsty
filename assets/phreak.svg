@@ -1,0 +1,64 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250">
+  <defs>
+    <!-- Neon gradient and glow filters -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff00cc"/>
+      <stop offset="100%" stop-color="#00ffff"/>
+    </linearGradient>
+
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feFlood flood-color="#00ffff" flood-opacity="0.8"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Animated shimmer gradient -->
+    <linearGradient id="shimmerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="white" stop-opacity="0"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform"
+        type="translate" from="-1 0" to="1 0"
+        dur="3s" repeatCount="indefinite" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer border -->
+  <rect x="20" y="40" width="760" height="170" rx="30" ry="30"
+        stroke="#00ffff" stroke-width="6"
+        stroke-dasharray="15 10"
+        fill="none"
+        filter="url(#neonGlow)">
+    <animate attributeName="stroke-dashoffset" from="0" to="100"
+             dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- PHREAK text -->
+  <text x="400" y="150" text-anchor="middle" font-size="96"
+        font-family="Orbitron, 'Audiowide', sans-serif"
+        fill="url(#textGradient)" stroke="#ff0099" stroke-width="3"
+        filter="url(#neonGlow)" letter-spacing="4">
+    PHREAK
+    <animate attributeName="opacity" values="1;0.8;1" dur="1.5s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Shimmer overlay -->
+  <text x="400" y="150" text-anchor="middle" font-size="96"
+        font-family="Orbitron, 'Audiowide', sans-serif"
+        fill="url(#shimmerGradient)" opacity="0.5">
+    PHREAK
+  </text>
+
+  <!-- Subtle flicker -->
+  <rect x="0" y="0" width="800" height="250" fill="black" opacity="0">
+    <animate attributeName="opacity"
+             values="0;0;0.1;0;0;0.15;0"
+             dur="4s"
+             repeatCount="indefinite"/>
+  </rect>
+</svg>
