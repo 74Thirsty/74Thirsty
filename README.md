@@ -1,6 +1,5 @@
 ![Sheen Banner](https://github.com/74Thirsty/74Thirsty/blob/main/assets/gadget.svg)
 
-<div class="badge-row">
 <p align="center">
 
   <img src="https://komarev.com/ghpvc/?username=74Thirsty&style=flat-square" alt="profile views" />
@@ -11,8 +10,7 @@
   <a href="https://christopherhirschauer.bio"><img src="https://img.shields.io/badge/C.Hirschauer-Lead%20Developer-041E42?logo=parrotsecurity&labelColor=8D817B"></a>
 </p>
 
-[![2021-12-09-13-57-IMG-0249-removebg-preview.png](https://i.postimg.cc/PqX0VNsZ/2021-12-09-13-57-IMG-0249-removebg-preview.png)](https://postimg.cc/XrP2pjv7)
-
+[![2021-12-09-13-57-IMG-0249-removebg-preview.png](https://i.postimg.cc/PqX0VNsZ/2021-12-09-13-57-IMG-0249-removebg-preview.png?refresh=1)](https://postimg.cc/XrP2pjv7)
 
 > <p><strong>Christopher Hirschauer</strong><br>
 > Builder @ the bleeding edge of MEV, automation, and high-speed arbitrage.<br>
